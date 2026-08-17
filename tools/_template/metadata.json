@@ -1,0 +1,23 @@
+{
+  "name": "example_tool",
+  "display_name": "Example Tool",
+  "description": "A template demonstrating the standard structure for an Agent Tool / MCP server integration.",
+  "category": "Utilities",
+  "language": "python",
+  "mcp_compatible": true,
+  "author": {
+    "name": "Your Name / GitHub Handle",
+    "github": "your-github-username"
+  },
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "description": "The input parameter for the tool"
+      }
+    },
+    "required": ["query"]
+  },
+  "env_vars": []
+}

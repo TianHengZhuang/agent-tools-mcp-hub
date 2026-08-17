@@ -1,0 +1,28 @@
+{
+  "name": "duckduckgo_search",
+  "display_name": "DuckDuckGo Search",
+  "description": "Searches the web via DuckDuckGo and returns top search results including titles, snippets, and URLs.",
+  "category": "Search & Web",
+  "language": "python",
+  "mcp_compatible": true,
+  "author": {
+    "name": "Tarun Jalandhara",
+    "github": "tarunjalandhara"
+  },
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "description": "Search query keywords"
+      },
+      "max_results": {
+        "type": "integer",
+        "description": "Maximum number of search results to return (default 5)",
+        "default": 5
+      }
+    },
+    "required": ["query"]
+  },
+  "env_vars": []
+}

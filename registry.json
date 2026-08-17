@@ -1,0 +1,70 @@
+{
+  "total_tools": 2,
+  "tools": [
+    {
+      "name": "duckduckgo_search",
+      "display_name": "DuckDuckGo Search",
+      "description": "Searches the web via DuckDuckGo and returns top search results including titles, snippets, and URLs.",
+      "category": "Search & Web",
+      "language": "python",
+      "mcp_compatible": true,
+      "author": {
+        "name": "Tarun Jalandhara",
+        "github": "tarunjalandhara"
+      },
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Search query keywords"
+          },
+          "max_results": {
+            "type": "integer",
+            "description": "Maximum number of search results to return (default 5)",
+            "default": 5
+          }
+        },
+        "required": [
+          "query"
+        ]
+      },
+      "env_vars": []
+    },
+    {
+      "name": "slack_notifier",
+      "display_name": "Slack Notifier",
+      "description": "Sends rich markdown notifications and webhook alerts directly to Slack channels.",
+      "category": "Communication",
+      "language": "python",
+      "mcp_compatible": true,
+      "author": {
+        "name": "Tarun Jalandhara",
+        "github": "tarunjalandhara"
+      },
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "webhook_url": {
+            "type": "string",
+            "description": "Slack Incoming Webhook URL (or reads SLACK_WEBHOOK_URL env var)"
+          },
+          "message": {
+            "type": "string",
+            "description": "Markdown formatted message to post"
+          },
+          "title": {
+            "type": "string",
+            "description": "Optional title/header block for notification"
+          }
+        },
+        "required": [
+          "message"
+        ]
+      },
+      "env_vars": [
+        "SLACK_WEBHOOK_URL"
+      ]
+    }
+  ]
+}
