@@ -33,6 +33,11 @@ dist/
 .env
 .env.local
 
+# Local Playbooks & Setup Scripts (Do not commit to public repo)
+OUTREACH_PLAYBOOK.md
+SEED_ISSUES.md
+scripts/create_github_issues.py
+
 # OS
 .DS_Store
 Thumbs.db

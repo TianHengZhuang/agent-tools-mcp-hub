@@ -5,7 +5,7 @@
 [![Good First Issues](https://img.shields.io/github/issues/community/good-first-issue?label=good%20first%20issues&color=blue)](https://github.com/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
 [![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#-contributors)
 
-A curated, plug-and-play collection of **AI Agent Tools**, **Model Context Protocol (MCP)** servers, and integration connectors for modern AI agents (Claude, LangChain, CrewAI, AutoGen, OpenAI Swarm).
+A curated, plug-and-play collection of **AI Agent Tools**, **Model Context Protocol (MCP)** servers, and integration connectors for modern AI agents (LangChain, CrewAI, AutoGen, OpenAI Swarm).
 
 ---
 
@@ -38,7 +38,7 @@ import sys
 sys.path.append("tools/duckduckgo_search")
 from tool import search_duckduckgo
 
-results = search_duckduckgo(query="Model Context Protocol Anthropic", max_results=3)
+results = search_duckduckgo(query="Model Context Protocol Specification", max_results=3)
 print(results)
 ```
 

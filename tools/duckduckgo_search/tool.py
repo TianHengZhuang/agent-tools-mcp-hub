@@ -60,5 +60,5 @@ def search_duckduckgo(query: str, max_results: int = 5) -> Dict[str, Any]:
         }
 
 if __name__ == "__main__":
-    res = search_duckduckgo("Anthropic Claude Model Context Protocol")
+    res = search_duckduckgo("Model Context Protocol Specification")
     print(json.dumps(res, indent=2))
