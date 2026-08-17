@@ -12,7 +12,7 @@ We designed this repository so that **anyone can contribute in 15–20 minutes**
 1. Fork this repository on GitHub.
 2. Clone your fork locally:
    ```bash
-   git clone https://github.com/<your-username>/agent-tools-mcp-hub.git
+   git clone https://github.com/tarunjandra/agent-tools-mcp-hub.git
    cd agent-tools-mcp-hub
    git checkout -b feat/add-<tool-name>
    ```
