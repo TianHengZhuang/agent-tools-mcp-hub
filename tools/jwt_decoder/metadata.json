@@ -1,0 +1,25 @@
+{
+  "name": "jwt_decoder",
+  "display_name": "JWT / Base64 Token Decoder",
+  "description": "Decodes JSON Web Tokens (JWT) and Base64Url strings to inspect header, payload claims, and expiration status without requiring private keys.",
+  "category": "Utilities",
+  "language": "python",
+  "mcp_compatible": true,
+  "author": {
+    "name": "Stefan Nut",
+    "github": "stefannut"
+  },
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "token": {
+        "type": "string",
+        "description": "The JWT token string or base64url encoded string to decode"
+      }
+    },
+    "required": [
+      "token"
+    ]
+  },
+  "env_vars": []
+}
