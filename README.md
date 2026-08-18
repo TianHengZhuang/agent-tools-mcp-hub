@@ -27,6 +27,8 @@ Building AI agents requires connecting them to real-world APIs, tools, and datab
 | [`wikipedia_search`](tools/wikipedia_search/) | Search & Web | Python | ✅ | Fetch clean article extracts and summaries from Wikipedia |
 | [`crypto_price_checker`](tools/crypto_price_checker/) | Finance | Python | ✅ | Live cryptocurrency prices, 24h market trends & market caps |
 | [`slack_notifier`](tools/slack_notifier/) | Communication | Python | ✅ | Send structured alert blocks and updates to Slack channels |
+| [`jwt_decoder`](tools/jwt_decoder/) | Utilities | Python | ✅ | Decode JWT tokens and inspect headers & payloads |
+| [`langchain_wrapper_demo`](tools/langchain_wrapper_demo/) | AI Integration | Python | ✅ | StructuredTool wrapper integration for LangChain agents |
 | *[Add your tool here!](CONTRIBUTING.md)* | *Any* | *Any* | *Any* | *Submit a pull request in 15 minutes!* |
 
 ---
@@ -79,6 +81,8 @@ Thanks to these wonderful people for contributing to the Agent Tools Hub!
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/tarunjandra"><img src="https://avatars.githubusercontent.com/tarunjandra" width="80px;" alt="Tarun Jalandhara"/><br /><sub><b>Tarun Jalandhara</b></sub></a><br />💻 📖 🚇</td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/stefannut"><img src="https://avatars.githubusercontent.com/stefannut" width="80px;" alt="Stefan Nut"/><br /><sub><b>Stefan Nut</b></sub></a><br />💻 🔌</td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/govardhanreddyg2005-byte"><img src="https://avatars.githubusercontent.com/govardhanreddyg2005-byte" width="80px;" alt="Govardhan Reddy"/><br /><sub><b>Govardhan Reddy</b></sub></a><br />📖 🔌</td>
     </tr>
   </tbody>
 </table>

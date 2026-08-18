@@ -1,5 +1,5 @@
 {
-  "total_tools": 4,
+  "total_tools": 6,
   "tools": [
     {
       "name": "crypto_price_checker",
@@ -61,6 +61,58 @@
         ]
       },
       "env_vars": []
+    },
+    {
+      "name": "jwt_decoder",
+      "display_name": "JWT / Base64 Token Decoder",
+      "description": "Decodes JSON Web Tokens (JWT) and Base64Url strings to inspect header, payload claims, and expiration status without requiring private keys.",
+      "category": "Utilities",
+      "language": "python",
+      "mcp_compatible": true,
+      "author": {
+        "name": "Stefan Nut",
+        "github": "stefannut"
+      },
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string",
+            "description": "The JWT token string or base64url encoded string to decode"
+          }
+        },
+        "required": [
+          "token"
+        ]
+      },
+      "env_vars": []
+    },
+    {
+      "name": "langchain_wrapper_demo",
+      "display_name": "LangChain Wrapper Demo",
+      "description": "A demo tool configuration used for verifying external LangChain framework tool wrapper integration examples.",
+      "category": "Documentation",
+      "author": "govardhanreddyg2005-byte",
+      "version": "1.0.0",
+      "language": "python",
+      "mcp_compatible": true,
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "The search query or input string to process"
+          },
+          "count": {
+            "type": "integer",
+            "description": "The number of results to return",
+            "default": 5
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
     },
     {
       "name": "slack_notifier",
