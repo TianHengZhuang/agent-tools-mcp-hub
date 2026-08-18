@@ -1,6 +1,37 @@
 {
-  "total_tools": 2,
+  "total_tools": 4,
   "tools": [
+    {
+      "name": "crypto_price_checker",
+      "display_name": "Crypto Price Checker",
+      "description": "Fetches live cryptocurrency market prices, 24h change, and market cap in USD using the free CoinGecko API.",
+      "category": "Finance",
+      "language": "python",
+      "mcp_compatible": true,
+      "author": {
+        "name": "Tarun Jalandhara",
+        "github": "tarunjandra"
+      },
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "coin_id": {
+            "type": "string",
+            "description": "Cryptocurrency ID (e.g. bitcoin, ethereum, solana, dogecoin)",
+            "default": "bitcoin"
+          },
+          "currency": {
+            "type": "string",
+            "description": "Target fiat/crypto currency (default 'usd')",
+            "default": "usd"
+          }
+        },
+        "required": [
+          "coin_id"
+        ]
+      },
+      "env_vars": []
+    },
     {
       "name": "duckduckgo_search",
       "display_name": "DuckDuckGo Search",
@@ -65,6 +96,36 @@
       "env_vars": [
         "SLACK_WEBHOOK_URL"
       ]
+    },
+    {
+      "name": "wikipedia_search",
+      "display_name": "Wikipedia Knowledge Search",
+      "description": "Searches Wikipedia and returns clean extract summaries, page titles, and canonical URLs for agent knowledge retrieval.",
+      "category": "Search & Web",
+      "language": "python",
+      "mcp_compatible": true,
+      "author": {
+        "name": "Tarun Jalandhara",
+        "github": "tarunjandra"
+      },
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Topic or title to search on Wikipedia"
+          },
+          "sentences": {
+            "type": "integer",
+            "description": "Number of summary sentences to return (default 3)",
+            "default": 3
+          }
+        },
+        "required": [
+          "query"
+        ]
+      },
+      "env_vars": []
     }
   ]
 }

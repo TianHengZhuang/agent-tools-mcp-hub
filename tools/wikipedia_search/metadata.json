@@ -1,0 +1,28 @@
+{
+  "name": "wikipedia_search",
+  "display_name": "Wikipedia Knowledge Search",
+  "description": "Searches Wikipedia and returns clean extract summaries, page titles, and canonical URLs for agent knowledge retrieval.",
+  "category": "Search & Web",
+  "language": "python",
+  "mcp_compatible": true,
+  "author": {
+    "name": "Tarun Jalandhara",
+    "github": "tarunjandra"
+  },
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "description": "Topic or title to search on Wikipedia"
+      },
+      "sentences": {
+        "type": "integer",
+        "description": "Number of summary sentences to return (default 3)",
+        "default": 3
+      }
+    },
+    "required": ["query"]
+  },
+  "env_vars": []
+}

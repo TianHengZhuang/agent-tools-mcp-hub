@@ -24,7 +24,8 @@ Building AI agents requires connecting them to real-world APIs, tools, and datab
 | Tool Name | Category | Language | MCP Compatible | Description |
 | :--- | :--- | :--- | :---: | :--- |
 | [`duckduckgo_search`](tools/duckduckgo_search/) | Search & Web | Python | ✅ | Instant internet search tool using DuckDuckGo HTML/API |
-| [`github_issue_fetcher`](tools/github_issue_fetcher/) | Developer Tools | TypeScript | ✅ | Fetch and summarize issues & pull requests from GitHub repos |
+| [`wikipedia_search`](tools/wikipedia_search/) | Search & Web | Python | ✅ | Fetch clean article extracts and summaries from Wikipedia |
+| [`crypto_price_checker`](tools/crypto_price_checker/) | Finance | Python | ✅ | Live cryptocurrency prices, 24h market trends & market caps |
 | [`slack_notifier`](tools/slack_notifier/) | Communication | Python | ✅ | Send structured alert blocks and updates to Slack channels |
 | *[Add your tool here!](CONTRIBUTING.md)* | *Any* | *Any* | *Any* | *Submit a pull request in 15 minutes!* |
 
