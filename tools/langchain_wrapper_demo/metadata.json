@@ -1,0 +1,27 @@
+{
+  "name": "langchain_wrapper_demo",
+  "display_name": "LangChain Wrapper Demo",
+  "description": "A demo tool configuration used for verifying external LangChain framework tool wrapper integration examples.",
+  "category": "Documentation",
+  "author": "govardhanreddyg2005-byte",
+  "version": "1.0.0",
+  "language": "python",
+  "mcp_compatible": true,
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "description": "The search query or input string to process"
+      },
+      "count": {
+        "type": "integer",
+        "description": "The number of results to return",
+        "default": 5
+      }
+    },
+    "required": [
+      "query"
+    ]
+  }
+}
