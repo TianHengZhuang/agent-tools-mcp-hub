@@ -210,6 +210,36 @@
       "env_vars": []
     },
     {
+      "name": "rss_feed_reader",
+      "display_name": "RSS / Atom Feed Reader",
+      "description": "Parses any RSS or Atom feed URL and returns the latest articles with titles, links, summaries, and publish dates. No API key required.",
+      "category": "Search & Web",
+      "language": "python",
+      "mcp_compatible": true,
+      "author": {
+        "name": "imagenize",
+        "github": "imagenize"
+      },
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "feed_url": {
+            "type": "string",
+            "description": "Full HTTP or HTTPS URL of the RSS or Atom feed"
+          },
+          "max_results": {
+            "type": "integer",
+            "description": "Maximum number of articles to return (1-25, default 5)",
+            "default": 5
+          }
+        },
+        "required": [
+          "feed_url"
+        ]
+      },
+      "env_vars": []
+    },
+    {
       "name": "slack_notifier",
       "display_name": "Slack Notifier",
       "description": "Sends rich markdown notifications and webhook alerts directly to Slack channels.",
