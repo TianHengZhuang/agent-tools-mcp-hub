@@ -1,5 +1,5 @@
 {
-  "total_tools": 4,
+  "total_tools": 6,
   "tools": [
     {
       "name": "crypto_price_checker",
@@ -33,6 +33,41 @@
       "env_vars": []
     },
     {
+      "name": "currency_converter",
+      "display_name": "Currency Exchange Rate Converter",
+      "description": "Converts amounts between fiat currencies using free ECB exchange rates from the Frankfurter API (api.frankfurter.dev). No API key required.",
+      "category": "Finance",
+      "language": "python",
+      "mcp_compatible": true,
+      "author": {
+        "name": "Vishal Kumar",
+        "github": "vishalkumar"
+      },
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "from_currency": {
+            "type": "string",
+            "description": "ISO 4217 source currency code (e.g. USD, EUR, GBP)"
+          },
+          "to_currency": {
+            "type": "string",
+            "description": "ISO 4217 target currency code (e.g. INR, JPY, CAD)"
+          },
+          "amount": {
+            "type": "number",
+            "description": "Amount to convert (default 1)",
+            "default": 1
+          }
+        },
+        "required": [
+          "from_currency",
+          "to_currency"
+        ]
+      },
+      "env_vars": []
+    },
+    {
       "name": "duckduckgo_search",
       "display_name": "DuckDuckGo Search",
       "description": "Searches the web via DuckDuckGo and returns top search results including titles, snippets, and URLs.",
@@ -58,6 +93,36 @@
         },
         "required": [
           "query"
+        ]
+      },
+      "env_vars": []
+    },
+    {
+      "name": "open_meteo_weather",
+      "display_name": "Open-Meteo Weather",
+      "description": "Fetches current weather and a 7-day forecast for any city using the free, zero-auth Open-Meteo API.",
+      "category": "Search & Web",
+      "language": "python",
+      "mcp_compatible": true,
+      "author": {
+        "name": "Vishal Kumar",
+        "github": "vishalkumar"
+      },
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "city": {
+            "type": "string",
+            "description": "City or place name to look up (e.g. London, Tokyo, New York)"
+          },
+          "forecast_days": {
+            "type": "integer",
+            "description": "Number of forecast days to return (1-16, default 7)",
+            "default": 7
+          }
+        },
+        "required": [
+          "city"
         ]
       },
       "env_vars": []

@@ -25,7 +25,9 @@ Building AI agents requires connecting them to real-world APIs, tools, and datab
 | :--- | :--- | :--- | :---: | :--- |
 | [`duckduckgo_search`](tools/duckduckgo_search/) | Search & Web | Python | ✅ | Instant internet search tool using DuckDuckGo HTML/API |
 | [`wikipedia_search`](tools/wikipedia_search/) | Search & Web | Python | ✅ | Fetch clean article extracts and summaries from Wikipedia |
+| [`open_meteo_weather`](tools/open_meteo_weather/) | Search & Web | Python | ✅ | Current weather and 7-day forecast via the free Open-Meteo API |
 | [`crypto_price_checker`](tools/crypto_price_checker/) | Finance | Python | ✅ | Live cryptocurrency prices, 24h market trends & market caps |
+| [`currency_converter`](tools/currency_converter/) | Finance | Python | ✅ | Fiat currency conversion using free ECB rates (no API key) |
 | [`slack_notifier`](tools/slack_notifier/) | Communication | Python | ✅ | Send structured alert blocks and updates to Slack channels |
 | *[Add your tool here!](CONTRIBUTING.md)* | *Any* | *Any* | *Any* | *Submit a pull request in 15 minutes!* |
 
