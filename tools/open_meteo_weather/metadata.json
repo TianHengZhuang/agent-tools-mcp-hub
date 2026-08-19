@@ -1,0 +1,28 @@
+{
+  "name": "open_meteo_weather",
+  "display_name": "Open-Meteo Weather",
+  "description": "Fetches current weather and a 7-day forecast for any city using the free, zero-auth Open-Meteo API.",
+  "category": "Search & Web",
+  "language": "python",
+  "mcp_compatible": true,
+  "author": {
+    "name": "Vishal Kumar",
+    "github": "vishalkumar"
+  },
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "city": {
+        "type": "string",
+        "description": "City or place name to look up (e.g. London, Tokyo, New York)"
+      },
+      "forecast_days": {
+        "type": "integer",
+        "description": "Number of forecast days to return (1-16, default 7)",
+        "default": 7
+      }
+    },
+    "required": ["city"]
+  },
+  "env_vars": []
+}

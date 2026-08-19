@@ -1,0 +1,32 @@
+{
+  "name": "currency_converter",
+  "display_name": "Currency Exchange Rate Converter",
+  "description": "Converts amounts between fiat currencies using free ECB exchange rates from the Frankfurter API (api.frankfurter.dev). No API key required.",
+  "category": "Finance",
+  "language": "python",
+  "mcp_compatible": true,
+  "author": {
+    "name": "Vishal Kumar",
+    "github": "vishalkumar"
+  },
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "from_currency": {
+        "type": "string",
+        "description": "ISO 4217 source currency code (e.g. USD, EUR, GBP)"
+      },
+      "to_currency": {
+        "type": "string",
+        "description": "ISO 4217 target currency code (e.g. INR, JPY, CAD)"
+      },
+      "amount": {
+        "type": "number",
+        "description": "Amount to convert (default 1)",
+        "default": 1
+      }
+    },
+    "required": ["from_currency", "to_currency"]
+  },
+  "env_vars": []
+}
