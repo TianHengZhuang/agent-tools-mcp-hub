@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Good First Issues](https://img.shields.io/github/issues/community/good-first-issue?label=good%20first%20issues&color=blue)](https://github.com/tarunjandra/agent-tools-mcp-hub/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#-contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#-contributors)
 
 A curated, plug-and-play collection of **AI Agent Tools**, **Model Context Protocol (MCP)** servers, and integration connectors for modern AI agents (LangChain, CrewAI, AutoGen, OpenAI Swarm).
 
@@ -30,6 +30,7 @@ Building AI agents requires connecting them to real-world APIs, tools, and datab
 | [`crypto_price_checker`](tools/crypto_price_checker/) | Finance | Python | ✅ | Live cryptocurrency prices, 24h market trends & market caps |
 | [`currency_converter`](tools/currency_converter/) | Finance | Python | ✅ | Real-time foreign exchange rate conversion |
 | [`open_meteo_weather`](tools/open_meteo_weather/) | Weather | Python | ✅ | Zero-auth current weather & 7-day forecast queries |
+| [`sqlite_query_runner`](tools/sqlite_query_runner/) | Database | Python | ✅ | Safely execute read-only SQL queries on local SQLite databases |
 | [`slack_notifier`](tools/slack_notifier/) | Communication | Python | ✅ | Send structured alert blocks and updates to Slack channels |
 | [`jwt_decoder`](tools/jwt_decoder/) | Utilities | Python | ✅ | Decode JWT tokens and inspect headers & payloads |
 | [`langchain_wrapper_demo`](tools/langchain_wrapper_demo/) | AI Integration | Python | ✅ | StructuredTool wrapper integration for LangChain agents |
@@ -89,6 +90,7 @@ Thanks to these wonderful people for contributing to the Agent Tools Hub!
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/govardhanreddyg2005-byte"><img src="https://avatars.githubusercontent.com/govardhanreddyg2005-byte" width="80px;" alt="Govardhan Reddy"/><br /><sub><b>Govardhan Reddy</b></sub></a><br />📖 🔌</td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/gitvishal96"><img src="https://avatars.githubusercontent.com/gitvishal96" width="80px;" alt="Vishal"/><br /><sub><b>Vishal</b></sub></a><br />💻 🔍</td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/baseqube-git"><img src="https://avatars.githubusercontent.com/baseqube-git" width="80px;" alt="BaseQube"/><br /><sub><b>BaseQube</b></sub></a><br />💻 🌦️</td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/imagenize"><img src="https://avatars.githubusercontent.com/imagenize" width="80px;" alt="Imagenize"/><br /><sub><b>Imagenize</b></sub></a><br />💻 📡</td>
     </tr>
   </tbody>
 </table>
