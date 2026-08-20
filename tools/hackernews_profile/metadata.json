@@ -1,0 +1,34 @@
+{
+  "name": "hackernews_profile",
+  "display_name": "HackerNews Profile & Karma Checker",
+  "description": "Fetches HackerNews user profiles with karma, creation date, and submission count. Also retrieves top stories with scores and comment counts.",
+  "category": "Search & Web",
+  "language": "python",
+  "mcp_compatible": true,
+  "author": {
+    "name": "Liang Zhengtao",
+    "github": "liangzhengtao"
+  },
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "username": {
+        "type": "string",
+        "description": "HackerNews username to look up"
+      },
+      "action": {
+        "type": "string",
+        "description": "Action to perform: 'profile' for user profile, 'top' for top stories",
+        "enum": ["profile", "top"],
+        "default": "profile"
+      },
+      "limit": {
+        "type": "integer",
+        "description": "Number of top stories to return (default 10)",
+        "default": 10
+      }
+    },
+    "required": ["username"]
+  },
+  "env_vars": []
+}
