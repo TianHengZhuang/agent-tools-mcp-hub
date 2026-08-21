@@ -56,6 +56,7 @@ Building AI agents requires connecting them to real-world APIs, tools, and datab
 | [`google_custom_search`](tools/google_custom_search/) | Search & Web | Python | ✅ | Searches the web via Google's Custom Search JSON API and returns the top matching links with titles and snippets. |
 | [`supabase_table_query`](tools/supabase_table_query/) | Database | TypeScript | ✅ | Query and insert rows in a Supabase Postgres table using @supabase/supabase-js. |
 | [`postgres_query_runner`](tools/postgres_query_runner/) | Database | Python | ✅ | Execute parameterized, read-only SQL queries against a PostgreSQL database using psycopg2. |
+| [`redis_key_value_store`](tools/redis_key_value_store/) | Database | Python | ✅ | Get and set cached values in a Redis instance with optional TTL expiration. |
 | [`telegram_bot_sender`](tools/telegram_bot_sender/) | Communication | Python | ✅ | Send agent alerts and text messages to Telegram chats using the Telegram Bot API. |
 | [`twilio_sms_alert`](tools/twilio_sms_alert/) | Communication | Python | ✅ | Sends critical SMS alert notifications via the Twilio Programmable Messaging API for agent workflows. |
 | [`twitter_x_post_creator_ts`](tools/twitter_x_post_creator_ts/) | Communication | TypeScript | ✅ | Create automated text posts using the X API v2. |
