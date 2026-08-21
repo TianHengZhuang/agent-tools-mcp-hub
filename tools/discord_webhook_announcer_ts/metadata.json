@@ -1,0 +1,45 @@
+{
+  "name": "discord_webhook_announcer_ts",
+  "display_name": "Discord Webhook Announcer (TypeScript)",
+  "description": "Sends Discord notifications and rich embed announcements through a Discord webhook URL.",
+  "category": "Communication",
+  "language": "typescript",
+  "mcp_compatible": true,
+  "author": {
+    "name": "Samnang Uy",
+    "github": "usamnang-cmyk"
+  },
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "webhook_url": {
+        "type": "string",
+        "description": "Discord webhook URL"
+      },
+      "message": {
+        "type": "string",
+        "description": "Message or announcement content"
+      },
+      "title": {
+        "type": "string",
+        "description": "Optional embed title",
+        "default": "Announcement"
+      },
+      "username": {
+        "type": "string",
+        "description": "Optional webhook display name",
+        "default": "Agent Tools Hub"
+      },
+      "color": {
+        "type": "integer",
+        "description": "Discord embed color represented as a decimal integer",
+        "default": 3447003
+      }
+    },
+    "required": [
+      "webhook_url",
+      "message"
+    ]
+  },
+  "env_vars": []
+}
