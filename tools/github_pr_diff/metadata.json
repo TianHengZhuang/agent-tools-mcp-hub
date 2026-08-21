@@ -1,0 +1,40 @@
+{
+  "name": "github_pr_diff",
+  "display_name": "GitHub PR Code Review Diff Tool (TypeScript)",
+  "description": "Fetch diff files and patch details for any GitHub pull request to enable automated AI code reviews. Also retrieves review comments.",
+  "category": "Developer Tools",
+  "language": "typescript",
+  "mcp_compatible": true,
+  "author": {
+    "name": "jayarbrul03",
+    "github": "jayarbrul03"
+  },
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "action": {
+        "type": "string",
+        "description": "Action to perform: 'diff' to fetch changed files and patches, 'comments' to fetch review comments",
+        "enum": ["diff", "comments"],
+        "default": "diff"
+      },
+      "repo": {
+        "type": "string",
+        "description": "Repository in 'owner/repo' format (e.g. 'facebook/react')"
+      },
+      "pr_number": {
+        "type": "integer",
+        "description": "Pull request number to inspect"
+      },
+      "include_patch": {
+        "type": "boolean",
+        "description": "Include the unified diff patch content for each file (default true)",
+        "default": true
+      }
+    },
+    "required": ["repo", "pr_number"]
+  },
+  "env_vars": [
+    "GITHUB_TOKEN"
+  ]
+}
