@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Good First Issues](https://img.shields.io/github/issues/community/good-first-issue?label=good%20first%20issues&color=blue)](https://github.com/tarunjandra/agent-tools-mcp-hub/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
-[![All Contributors](https://img.shields.io/badge/all_contributors-20-orange.svg?style=flat-square)](#-contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-21-orange.svg?style=flat-square)](#-contributors)
 
 A curated, plug-and-play collection of **AI Agent Tools**, **Model Context Protocol (MCP)** servers, and integration connectors for modern AI agents (LangChain, CrewAI, AutoGen, OpenAI Swarm).
 
@@ -42,6 +42,7 @@ Building AI agents requires connecting them to real-world APIs, tools, and datab
 | [`hackernews_profile_ts`](tools/hackernews_profile_ts/) | Search & Web | TypeScript | ✅ | Fetches HackerNews user profiles with karma, creation date, and submission count. |
 | [`github_repo_info`](tools/github_repo_info/) | Developer Tools | Python | ✅ | Fetches public metadata for any GitHub repository — stars, forks, primary language, open issues, license, topics and description. |
 | [`github_issue_pr_manager`](tools/github_issue_pr_manager/) | Developer Tools | Python | ✅ | Lists GitHub issues/PRs and creates issues/comments for repositories via GitHub REST API. |
+| [`github_pr_diff`](tools/github_pr_diff/) | Developer Tools | TypeScript | ✅ | Fetch diff files and patch details for any GitHub pull request to enable automated AI code reviews. |
 | [`spotify_player`](tools/spotify_player/) | Media | Python | ✅ | Fetch the currently playing track and the user's private/public playlists from Spotify. |
 | [`pdf_text_extractor`](tools/pdf_text_extractor/) | Utilities | Python | ✅ | Extract plain text from local PDF files using pypdf. |
 | [`brave_search`](tools/brave_search/) | Search & Web | Python | ✅ | Queries the Brave Search REST API for privacy-first web results with titles, URLs, snippets and freshness filters. |
@@ -125,6 +126,7 @@ Thanks to these wonderful people for contributing to the Agent Tools Hub!
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/JacobTurner0321"><img src="https://avatars.githubusercontent.com/JacobTurner0321" width="80px;" alt="Trung Nguyen"/><br /><sub><b>Trung Nguyen</b></sub></a><br />💻 🔍</td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/jayarbrul03"><img src="https://avatars.githubusercontent.com/jayarbrul03" width="80px;" alt="jayarbrul03"/><br /><sub><b>jayarbrul03</b></sub></a><br />💻 🗄️</td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ImpactEngineer87"><img src="https://avatars.githubusercontent.com/ImpactEngineer87" width="80px;" alt="ImpactEngineer87"/><br /><sub><b>ImpactEngineer87</b></sub></a><br />💻 💬</td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/mikerdev92"><img src="https://avatars.githubusercontent.com/mikerdev92" width="80px;" alt="Mike R"/><br /><sub><b>Mike R</b></sub></a><br />💻 🔧</td>
     </tr>
   </tbody>
 </table>

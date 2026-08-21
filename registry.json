@@ -1,5 +1,5 @@
 {
-  "total_tools": 26,
+  "total_tools": 28,
   "tools": [
     {
       "name": "arxiv_search",
@@ -309,6 +309,128 @@
         "GEMINI_API_KEY",
         "GOOGLE_CLOUD_PROJECT",
         "GOOGLE_CLOUD_LOCATION"
+      ]
+    },
+    {
+      "name": "github_issue_pr_manager",
+      "display_name": "GitHub Issue & PR Manager",
+      "description": "Lists repository issues and pull requests, and can create issues or comments via the GitHub REST API.",
+      "category": "Developer Tools",
+      "language": "python",
+      "mcp_compatible": true,
+      "author": {
+        "name": "mikerdev92",
+        "github": "mikerdev92"
+      },
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "description": "Action to execute: list_issues, list_pull_requests, get_issue, create_issue, create_issue_comment"
+          },
+          "repo": {
+            "type": "string",
+            "description": "Repository in owner/repo format, e.g. tarunjandra/agent-tools-mcp-hub"
+          },
+          "state": {
+            "type": "string",
+            "description": "Filter state for listing actions: open, closed, or all",
+            "default": "open"
+          },
+          "per_page": {
+            "type": "integer",
+            "description": "Items per page for list actions (1-100)",
+            "default": 10
+          },
+          "page": {
+            "type": "integer",
+            "description": "Page number for list actions",
+            "default": 1
+          },
+          "include_pull_requests": {
+            "type": "boolean",
+            "description": "For list_issues action, include PR-type items from issues endpoint",
+            "default": false
+          },
+          "title": {
+            "type": "string",
+            "description": "Issue title for create_issue action"
+          },
+          "body": {
+            "type": "string",
+            "description": "Issue body/description for create_issue action"
+          },
+          "labels": {
+            "type": "string",
+            "description": "Optional labels for create_issue action as a comma-separated string, e.g. bug,enhancement"
+          },
+          "issue_number": {
+            "type": "integer",
+            "description": "Issue or PR number for get_issue and create_issue_comment actions"
+          },
+          "comment_body": {
+            "type": "string",
+            "description": "Comment text for create_issue_comment action"
+          },
+          "github_token": {
+            "type": "string",
+            "description": "Optional override token. Defaults to GITHUB_TOKEN env var."
+          }
+        },
+        "required": [
+          "action",
+          "repo"
+        ]
+      },
+      "env_vars": [
+        "GITHUB_TOKEN"
+      ]
+    },
+    {
+      "name": "github_pr_diff",
+      "display_name": "GitHub PR Code Review Diff Tool (TypeScript)",
+      "description": "Fetch diff files and patch details for any GitHub pull request to enable automated AI code reviews. Also retrieves review comments.",
+      "category": "Developer Tools",
+      "language": "typescript",
+      "mcp_compatible": true,
+      "author": {
+        "name": "jayarbrul03",
+        "github": "jayarbrul03"
+      },
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "description": "Action to perform: 'diff' to fetch changed files and patches, 'comments' to fetch review comments",
+            "enum": [
+              "diff",
+              "comments"
+            ],
+            "default": "diff"
+          },
+          "repo": {
+            "type": "string",
+            "description": "Repository in 'owner/repo' format (e.g. 'facebook/react')"
+          },
+          "pr_number": {
+            "type": "integer",
+            "description": "Pull request number to inspect"
+          },
+          "include_patch": {
+            "type": "boolean",
+            "description": "Include the unified diff patch content for each file (default true)",
+            "default": true
+          }
+        },
+        "required": [
+          "repo",
+          "pr_number"
+        ]
+      },
+      "env_vars": [
+        "GITHUB_TOKEN"
       ]
     },
     {
