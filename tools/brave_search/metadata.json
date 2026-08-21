@@ -1,0 +1,58 @@
+{
+  "name": "brave_search",
+  "display_name": "Brave Search Web Connector",
+  "description": "Queries the Brave Search REST API for privacy-first web results with titles, URLs, snippets and freshness filters, plus an optional AI summarizer key.",
+  "category": "Search & Web",
+  "language": "python",
+  "mcp_compatible": true,
+  "author": {
+    "name": "Anirudha Talmale",
+    "github": "anirudhatalmale6-alt"
+  },
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "description": "The web search query (e.g. 'model context protocol spec')"
+      },
+      "count": {
+        "type": "integer",
+        "description": "Number of results to return (1-20, default 5)",
+        "default": 5
+      },
+      "country": {
+        "type": "string",
+        "description": "Two-letter country code used to localise results (default 'US')",
+        "default": "US"
+      },
+      "search_lang": {
+        "type": "string",
+        "description": "Language code for the returned results (default 'en')",
+        "default": "en"
+      },
+      "safesearch": {
+        "type": "string",
+        "description": "Adult content filter: 'off', 'moderate' or 'strict' (default 'moderate')",
+        "default": "moderate"
+      },
+      "freshness": {
+        "type": "string",
+        "description": "Restrict results by age: 'pd' (24h), 'pw' (7d), 'pm' (31d), 'py' (1y) or a range like '2024-01-01to2024-06-30'"
+      },
+      "summary": {
+        "type": "boolean",
+        "description": "Request an AI summarizer key alongside the results. Requires a Brave plan that includes the Summarizer (default false).",
+        "default": false
+      },
+      "api_key": {
+        "type": "string",
+        "description": "Brave Search subscription token. Reads BRAVE_SEARCH_API_KEY (or BRAVE_API_KEY) env var if omitted."
+      }
+    },
+    "required": ["query"]
+  },
+  "env_vars": [
+    "BRAVE_SEARCH_API_KEY"
+  ]
+}
