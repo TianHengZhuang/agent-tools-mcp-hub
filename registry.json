@@ -1038,7 +1038,9 @@
           "query"
         ]
       },
-      "env_vars": ["SQLITE_ALLOWED_ROOTS"],
+      "env_vars": [
+        "SQLITE_ALLOWED_ROOTS"
+      ],
       "returns": {
         "type": "object",
         "description": "Query execution result containing columns, rows as key-value objects, row_count, execution_time_ms, and status"

@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Good First Issues](https://img.shields.io/github/issues/community/good-first-issue?label=good%20first%20issues&color=blue)](https://github.com/tarunjandra/agent-tools-mcp-hub/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
-[![All Contributors](https://img.shields.io/badge/all_contributors-25-orange.svg?style=flat-square)](#-contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-26-orange.svg?style=flat-square)](#-contributors)
 
 A curated, plug-and-play collection of **AI Agent Tools**, **Model Context Protocol (MCP)** servers, and integration connectors for modern AI agents (LangChain, CrewAI, AutoGen, OpenAI Swarm).
 
@@ -138,6 +138,7 @@ Thanks to these wonderful people for contributing to the Agent Tools Hub!
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/hernandezcruzhecto"><img src="https://avatars.githubusercontent.com/hernandezcruzhecto" width="80px;" alt="hernandezcruzhecto"/><br /><sub><b>hernandezcruzhecto</b></sub></a><br />💻 🗓️</td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ricardo4453"><img src="https://avatars.githubusercontent.com/ricardo4453" width="80px;" alt="ricardo4453"/><br /><sub><b>ricardo4453</b></sub></a><br />💻 💬</td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/tomwork0427"><img src="https://avatars.githubusercontent.com/tomwork0427" width="80px;" alt="tomwork0427"/><br /><sub><b>tomwork0427</b></sub></a><br />💻 🔍</td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/goldenstar9393"><img src="https://avatars.githubusercontent.com/goldenstar9393" width="80px;" alt="goldenstar9393"/><br /><sub><b>goldenstar9393</b></sub></a><br />💻 🛡️</td>
     </tr>
   </tbody>
 </table>
