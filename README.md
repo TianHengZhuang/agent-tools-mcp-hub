@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Good First Issues](https://img.shields.io/github/issues/community/good-first-issue?label=good%20first%20issues&color=blue)](https://github.com/tarunjandra/agent-tools-mcp-hub/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
-[![All Contributors](https://img.shields.io/badge/all_contributors-23-orange.svg?style=flat-square)](#-contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-24-orange.svg?style=flat-square)](#-contributors)
 
 A curated, plug-and-play collection of **AI Agent Tools**, **Model Context Protocol (MCP)** servers, and integration connectors for modern AI agents (LangChain, CrewAI, AutoGen, OpenAI Swarm).
 
@@ -53,6 +53,7 @@ Building AI agents requires connecting them to real-world APIs, tools, and datab
 | [`google_custom_search`](tools/google_custom_search/) | Search & Web | Python | ✅ | Searches the web via Google's Custom Search JSON API and returns the top matching links with titles and snippets. |
 | [`supabase_table_query`](tools/supabase_table_query/) | Database | TypeScript | ✅ | Query and insert rows in a Supabase Postgres table using @supabase/supabase-js. |
 | [`telegram_bot_sender`](tools/telegram_bot_sender/) | Communication | Python | ✅ | Send agent alerts and text messages to Telegram chats using the Telegram Bot API. |
+| [`twilio_sms_alert`](tools/twilio_sms_alert/) | Communication | Python | ✅ | Sends critical SMS alert notifications via the Twilio Programmable Messaging API for agent workflows. |
 | *[Add your tool here!](CONTRIBUTING.md)* | *Any* | *Any* | *Any* | *Submit a pull request in 15 minutes!* |
 
 ---
@@ -133,6 +134,7 @@ Thanks to these wonderful people for contributing to the Agent Tools Hub!
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/phjpdev"><img src="https://avatars.githubusercontent.com/phjpdev" width="80px;" alt="Jean Patrick"/><br /><sub><b>Jean Patrick</b></sub></a><br />💻 🛠️</td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/hernandezcruzhecto"><img src="https://avatars.githubusercontent.com/hernandezcruzhecto" width="80px;" alt="hernandezcruzhecto"/><br /><sub><b>hernandezcruzhecto</b></sub></a><br />💻 🗓️</td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ricardo4453"><img src="https://avatars.githubusercontent.com/ricardo4453" width="80px;" alt="ricardo4453"/><br /><sub><b>ricardo4453</b></sub></a><br />💻 💬</td>
     </tr>
   </tbody>
 </table>
