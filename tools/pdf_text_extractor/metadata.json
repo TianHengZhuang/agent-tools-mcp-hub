@@ -1,0 +1,23 @@
+{
+  "name": "pdf_text_extractor",
+  "display_name": "PDF Text Extractor",
+  "description": "Extract plain text from local PDF files using pypdf.",
+  "category": "Utilities",
+  "language": "python",
+  "mcp_compatible": true,
+  "author": {
+    "name": "Ayesha Maqsood",
+    "github": "ayesha8087"
+  },
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "file_path": {
+        "type": "string",
+        "description": "Path to the local PDF file"
+      }
+    },
+    "required": ["file_path"]
+  },
+  "env_vars": []
+}
