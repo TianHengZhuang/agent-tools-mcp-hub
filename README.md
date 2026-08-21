@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Good First Issues](https://img.shields.io/github/issues/community/good-first-issue?label=good%20first%20issues&color=blue)](https://github.com/tarunjandra/agent-tools-mcp-hub/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
-[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#-contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#-contributors)
 
 A curated, plug-and-play collection of **AI Agent Tools**, **Model Context Protocol (MCP)** servers, and integration connectors for modern AI agents (LangChain, CrewAI, AutoGen, OpenAI Swarm).
 
@@ -36,6 +36,10 @@ Building AI agents requires connecting them to real-world APIs, tools, and datab
 | [`langchain_wrapper_demo`](tools/langchain_wrapper_demo/) | AI Integration | Python | ✅ | StructuredTool wrapper integration for LangChain agents |
 | [`hackernews_profile`](tools/hackernews_profile/) | Search & Web | Python | ✅ | Fetch user profile data and karma score from HackerNews |
 | [`crypto_price_tracker`](tools/crypto_price_tracker/) | Finance | Python | ✅ | A tool to fetch the current price of cryptocurrencies using the CoinGecko API. |
+| [`telegram_notifier`](tools/telegram_notifier/) | Communication | Python | ✅ | Sends text messages, alerts, and Markdown/HTML notifications to Telegram chats or channels via Telegram Bot API. |
+| [`yahoo_finance`](tools/yahoo_finance/) | Finance | Python | ✅ | A tool to fetch current stock quotes and basic company info using Yahoo Finance. |
+| [`qr_code_generator`](tools/qr_code_generator/) | Utilities | Python | ✅ | Generates QR code images from URLs or text strings and returns them as base64-encoded PNG data. |
+| [`hackernews_profile_ts`](tools/hackernews_profile_ts/) | Search & Web | TypeScript | ✅ | Fetches HackerNews user profiles with karma, creation date, and submission count. |
 | *[Add your tool here!](CONTRIBUTING.md)* | *Any* | *Any* | *Any* | *Submit a pull request in 15 minutes!* |
 
 ---
@@ -97,6 +101,9 @@ Thanks to these wonderful people for contributing to the Agent Tools Hub!
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/jalaj"><img src="https://avatars.githubusercontent.com/jalaj" width="80px;" alt="jalaj"/><br /><sub><b>jalaj</b></sub></a><br />💻 📈</td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/A13790618"><img src="https://avatars.githubusercontent.com/A13790618" width="80px;" alt="A13790618"/><br /><sub><b>A13790618</b></sub></a><br />💻 💬</td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ace-ai-controller"><img src="https://avatars.githubusercontent.com/ace-ai-controller" width="80px;" alt="ace-ai-controller"/><br /><sub><b>ace-ai-controller</b></sub></a><br />💻 🛠️</td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Lucas-doyle"><img src="https://avatars.githubusercontent.com/Lucas-doyle" width="80px;" alt="Lucas-doyle"/><br /><sub><b>Lucas-doyle</b></sub></a><br />💻 📰</td>
     </tr>
   </tbody>
 </table>

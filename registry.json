@@ -1,5 +1,5 @@
 {
-  "total_tools": 14,
+  "total_tools": 17,
   "tools": [
     {
       "name": "arxiv_search",
@@ -204,7 +204,7 @@
       "mcp_compatible": true,
       "author": {
         "name": "Assessment Candidate",
-        "github": "candidate-username"
+        "github": "assessment-candidate"
       },
       "parameters": {
         "type": "object",
@@ -317,6 +317,47 @@
       "env_vars": []
     },
     {
+      "name": "qr_code_generator",
+      "display_name": "QR Code Generator",
+      "description": "Generates QR code images from URLs or text strings and returns them as base64-encoded PNG data. Supports configurable size and error correction levels.",
+      "category": "Utilities",
+      "language": "python",
+      "mcp_compatible": true,
+      "author": {
+        "name": "Gabriel Villalobos",
+        "github": "nehilor"
+      },
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "string",
+            "description": "The text, URL, or data to encode into a QR code"
+          },
+          "size": {
+            "type": "integer",
+            "description": "Size of the QR code image in pixels (default 256)",
+            "default": 256
+          },
+          "error_correction": {
+            "type": "string",
+            "description": "Error correction level: L (7%), M (15%), Q (25%), H (30%). Default M",
+            "enum": [
+              "L",
+              "M",
+              "Q",
+              "H"
+            ],
+            "default": "M"
+          }
+        },
+        "required": [
+          "data"
+        ]
+      },
+      "env_vars": []
+    },
+    {
       "name": "rss_feed_reader",
       "display_name": "RSS / Atom Feed Reader",
       "description": "Parses any RSS or Atom feed URL and returns the latest articles with titles, links, summaries, and publish dates. No API key required.",
@@ -424,6 +465,52 @@
       }
     },
     {
+      "name": "telegram_notifier",
+      "display_name": "Telegram Notifier",
+      "description": "Sends text messages, alerts, and Markdown/HTML notifications to Telegram chats or channels via Telegram Bot API.",
+      "category": "Communication",
+      "language": "python",
+      "mcp_compatible": true,
+      "author": {
+        "name": "Alireza",
+        "github": "A13790618"
+      },
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "description": "The text message content to send to Telegram (supports Markdown or HTML formatting)"
+          },
+          "chat_id": {
+            "type": "string",
+            "description": "Target Telegram Chat ID or Channel username (e.g., '@mychannel' or '123456789'). Reads TELEGRAM_CHAT_ID env var if omitted."
+          },
+          "bot_token": {
+            "type": "string",
+            "description": "Telegram Bot Token from @BotFather. Reads TELEGRAM_BOT_TOKEN env var if omitted."
+          },
+          "parse_mode": {
+            "type": "string",
+            "description": "Message formatting mode ('Markdown', 'MarkdownV2', or 'HTML'). Defaults to 'Markdown'.",
+            "default": "Markdown"
+          },
+          "disable_web_page_preview": {
+            "type": "boolean",
+            "description": "Whether to disable link previews in the sent message (default false).",
+            "default": false
+          }
+        },
+        "required": [
+          "message"
+        ]
+      },
+      "env_vars": [
+        "TELEGRAM_BOT_TOKEN",
+        "TELEGRAM_CHAT_ID"
+      ]
+    },
+    {
       "name": "wikipedia_search",
       "display_name": "Wikipedia Knowledge Search",
       "description": "Searches Wikipedia and returns clean extract summaries, page titles, and canonical URLs for agent knowledge retrieval.",
@@ -449,6 +536,31 @@
         },
         "required": [
           "query"
+        ]
+      },
+      "env_vars": []
+    },
+    {
+      "name": "yahoo_finance",
+      "display_name": "Yahoo Finance Stock Quote",
+      "description": "A tool to fetch current stock quotes and basic company info using Yahoo Finance.",
+      "category": "Finance",
+      "language": "python",
+      "mcp_compatible": true,
+      "author": {
+        "name": "Antigravity Agent",
+        "github": "tarunjandra"
+      },
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "ticker": {
+            "type": "string",
+            "description": "The stock ticker symbol (e.g., 'AAPL', 'MSFT')"
+          }
+        },
+        "required": [
+          "ticker"
         ]
       },
       "env_vars": []
