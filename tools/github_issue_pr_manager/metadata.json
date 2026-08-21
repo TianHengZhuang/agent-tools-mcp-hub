@@ -6,15 +6,15 @@
   "language": "python",
   "mcp_compatible": true,
   "author": {
-    "name": "softwaretech412",
-    "github": "softwaretech412"
+    "name": "mikerdev92",
+    "github": "mikerdev92"
   },
   "parameters": {
     "type": "object",
     "properties": {
       "action": {
         "type": "string",
-        "description": "Action to execute: list_issues, list_pull_requests, create_issue, create_issue_comment"
+        "description": "Action to execute: list_issues, list_pull_requests, get_issue, create_issue, create_issue_comment"
       },
       "repo": {
         "type": "string",
@@ -48,9 +48,13 @@
         "type": "string",
         "description": "Issue body/description for create_issue action"
       },
+      "labels": {
+        "type": "string",
+        "description": "Optional labels for create_issue action as a comma-separated string, e.g. bug,enhancement"
+      },
       "issue_number": {
         "type": "integer",
-        "description": "Issue or PR number for create_issue_comment action"
+        "description": "Issue or PR number for get_issue and create_issue_comment actions"
       },
       "comment_body": {
         "type": "string",

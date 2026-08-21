@@ -42,10 +42,34 @@ def _format_error(resp: requests.Response) -> str:
         payload = resp.json()
         message = payload.get("message")
         if message:
+            docs_url = payload.get("documentation_url")
+            if docs_url:
+                return f"GitHub API error ({resp.status_code}): {message}. See: {docs_url}"
             return f"GitHub API error ({resp.status_code}): {message}"
     except ValueError:
         pass
+    if resp.status_code == 403 and resp.headers.get("X-RateLimit-Remaining") == "0":
+        reset_ts = resp.headers.get("X-RateLimit-Reset", "unknown")
+        return f"GitHub API rate limit exceeded. Rate limit resets at unix timestamp: {reset_ts}."
     return f"GitHub API returned status {resp.status_code}."
+
+
+def _coerce_int(value: Any, default: int, minimum: int = 1) -> int:
+    try:
+        parsed = int(value)
+    except (TypeError, ValueError):
+        parsed = default
+    return max(minimum, parsed)
+
+
+def _coerce_bool(value: Any, default: bool = False) -> bool:
+    if value is None:
+        return default
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, str):
+        return value.strip().lower() in {"1", "true", "yes", "y", "on"}
+    return bool(value)
 
 
 def _list_issues(
@@ -156,6 +180,7 @@ def _create_issue(
     repo: str,
     title: str,
     body: str = "",
+    labels: Optional[list[str]] = None,
     token: Optional[str] = None,
 ) -> Dict[str, Any]:
     repo_parts = _get_repo_parts(repo)
@@ -171,7 +196,9 @@ def _create_issue(
 
     owner, name = repo_parts
     url = f"{GITHUB_API_BASE}/repos/{owner}/{name}/issues"
-    payload = {"title": title.strip(), "body": body or ""}
+    payload: Dict[str, Any] = {"title": title.strip(), "body": body or ""}
+    if labels:
+        payload["labels"] = labels
 
     try:
         resp = requests.post(url, headers=_headers(token), json=payload, timeout=20)
@@ -188,6 +215,7 @@ def _create_issue(
             "number": item.get("number"),
             "title": item.get("title"),
             "state": item.get("state"),
+            "labels": [(label or {}).get("name") for label in item.get("labels", [])],
             "url": item.get("html_url"),
         },
     }
@@ -236,6 +264,47 @@ def _create_issue_comment(
     }
 
 
+def _get_issue(
+    repo: str,
+    issue_number: int,
+    token: Optional[str] = None,
+) -> Dict[str, Any]:
+    repo_parts = _get_repo_parts(repo)
+    if not repo_parts:
+        return {"success": False, "error": "Parameter 'repo' must be in 'owner/repo' format."}
+    if not issue_number:
+        return {"success": False, "error": "Parameter 'issue_number' is required for get_issue action."}
+
+    owner, name = repo_parts
+    url = f"{GITHUB_API_BASE}/repos/{owner}/{name}/issues/{issue_number}"
+
+    try:
+        resp = requests.get(url, headers=_headers(token), timeout=20)
+    except requests.RequestException as exc:
+        return {"success": False, "error": f"Network error contacting GitHub: {exc}"}
+
+    if resp.status_code != 200:
+        return {"success": False, "error": _format_error(resp)}
+
+    item = resp.json()
+    return {
+        "success": True,
+        "data": {
+            "repo": f"{owner}/{name}",
+            "number": item.get("number"),
+            "title": item.get("title"),
+            "state": item.get("state"),
+            "author": (item.get("user") or {}).get("login"),
+            "comments": item.get("comments"),
+            "labels": [(label or {}).get("name") for label in item.get("labels", [])],
+            "is_pull_request": "pull_request" in item,
+            "created_at": item.get("created_at"),
+            "updated_at": item.get("updated_at"),
+            "url": item.get("html_url"),
+        },
+    }
+
+
 def run_tool(query: str = "", **kwargs: Any) -> Dict[str, Any]:
     """
     Dispatches GitHub actions.
@@ -243,20 +312,28 @@ def run_tool(query: str = "", **kwargs: Any) -> Dict[str, Any]:
     Actions:
       - list_issues
       - list_pull_requests
+      - get_issue
       - create_issue
       - create_issue_comment
     """
     action = (kwargs.get("action") or "list_issues").strip()
     repo = kwargs.get("repo") or query
     state = kwargs.get("state", "open")
-    per_page = int(kwargs.get("per_page", 10))
-    page = int(kwargs.get("page", 1))
-    include_pull_requests = bool(kwargs.get("include_pull_requests", False))
+    per_page = _coerce_int(kwargs.get("per_page", 10), default=10, minimum=1)
+    page = _coerce_int(kwargs.get("page", 1), default=1, minimum=1)
+    include_pull_requests = _coerce_bool(kwargs.get("include_pull_requests", False), default=False)
     title = kwargs.get("title", "")
     body = kwargs.get("body", "")
+    labels_raw = kwargs.get("labels")
     issue_number = kwargs.get("issue_number")
     comment_body = kwargs.get("comment_body", "")
     token = kwargs.get("github_token") or os.getenv("GITHUB_TOKEN")
+    labels: list[str] = []
+
+    if isinstance(labels_raw, list):
+        labels = [str(label).strip() for label in labels_raw if str(label).strip()]
+    elif isinstance(labels_raw, str) and labels_raw.strip():
+        labels = [segment.strip() for segment in labels_raw.split(",") if segment.strip()]
 
     if state not in {"open", "closed", "all"}:
         return {"success": False, "error": "Parameter 'state' must be one of: open, closed, all."}
@@ -278,8 +355,17 @@ def run_tool(query: str = "", **kwargs: Any) -> Dict[str, Any]:
             page=page,
             token=token,
         )
+    if action == "get_issue":
+        try:
+            issue_number_int = int(issue_number)
+        except (TypeError, ValueError):
+            return {
+                "success": False,
+                "error": "Parameter 'issue_number' must be a valid integer for get_issue action.",
+            }
+        return _get_issue(repo=repo, issue_number=issue_number_int, token=token)
     if action == "create_issue":
-        return _create_issue(repo=repo, title=title, body=body, token=token)
+        return _create_issue(repo=repo, title=title, body=body, labels=labels, token=token)
     if action == "create_issue_comment":
         try:
             issue_number_int = int(issue_number)
@@ -297,7 +383,7 @@ def run_tool(query: str = "", **kwargs: Any) -> Dict[str, Any]:
 
     return {
         "success": False,
-        "error": "Unsupported action. Use one of: list_issues, list_pull_requests, create_issue, create_issue_comment.",
+        "error": "Unsupported action. Use one of: list_issues, list_pull_requests, get_issue, create_issue, create_issue_comment.",
     }
 
 
