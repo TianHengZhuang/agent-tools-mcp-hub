@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Good First Issues](https://img.shields.io/github/issues/community/good-first-issue?label=good%20first%20issues&color=blue)](https://github.com/tarunjandra/agent-tools-mcp-hub/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
-[![All Contributors](https://img.shields.io/badge/all_contributors-24-orange.svg?style=flat-square)](#-contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-25-orange.svg?style=flat-square)](#-contributors)
 
 A curated, plug-and-play collection of **AI Agent Tools**, **Model Context Protocol (MCP)** servers, and integration connectors for modern AI agents (LangChain, CrewAI, AutoGen, OpenAI Swarm).
 
@@ -44,6 +44,7 @@ Building AI agents requires connecting them to real-world APIs, tools, and datab
 | [`github_issue_pr_manager`](tools/github_issue_pr_manager/) | Developer Tools | Python | ✅ | Lists GitHub issues/PRs and creates issues/comments for repositories via GitHub REST API. |
 | [`github_pr_diff`](tools/github_pr_diff/) | Developer Tools | TypeScript | ✅ | Fetch diff files and patch details for any GitHub pull request to enable automated AI code reviews. |
 | [`github_pr_diff_ts`](tools/github_pr_diff_ts/) | Developer Tools | TypeScript | ✅ | Fetches pull request metadata, per-file patches, and raw unified diffs from the GitHub REST API to enable automated AI code reviews. |
+| [`github_pr_code_review_diff_ts`](tools/github_pr_code_review_diff_ts/) | Developer Tools | TypeScript | ✅ | Fetches changed files and patch details for an open GitHub pull request for automated code review workflows. |
 | [`spotify_player`](tools/spotify_player/) | Media | Python | ✅ | Fetch the currently playing track and the user's private/public playlists from Spotify. |
 | [`pdf_text_extractor`](tools/pdf_text_extractor/) | Utilities | Python | ✅ | Extract plain text from local PDF files using pypdf. |
 | [`public_holiday_lookup`](tools/public_holiday_lookup/) | Utilities | Python | ✅ | Retrieves public holiday dates for an ISO country code and calendar year using the free Nager.Date API. |
@@ -135,6 +136,7 @@ Thanks to these wonderful people for contributing to the Agent Tools Hub!
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/phjpdev"><img src="https://avatars.githubusercontent.com/phjpdev" width="80px;" alt="Jean Patrick"/><br /><sub><b>Jean Patrick</b></sub></a><br />💻 🛠️</td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/hernandezcruzhecto"><img src="https://avatars.githubusercontent.com/hernandezcruzhecto" width="80px;" alt="hernandezcruzhecto"/><br /><sub><b>hernandezcruzhecto</b></sub></a><br />💻 🗓️</td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ricardo4453"><img src="https://avatars.githubusercontent.com/ricardo4453" width="80px;" alt="ricardo4453"/><br /><sub><b>ricardo4453</b></sub></a><br />💻 💬</td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/tomwork0427"><img src="https://avatars.githubusercontent.com/tomwork0427" width="80px;" alt="tomwork0427"/><br /><sub><b>tomwork0427</b></sub></a><br />💻 🔍</td>
     </tr>
   </tbody>
 </table>
