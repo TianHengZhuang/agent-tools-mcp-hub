@@ -1,0 +1,72 @@
+{
+  "name": "github_pr_diff_ts",
+  "display_name": "GitHub PR Code Review Diff Tool (TypeScript)",
+  "description": "Fetches pull request metadata, per-file patches, and raw unified diffs from the GitHub REST API to enable automated AI code reviews. Handles pagination, patch truncation, and generated-file filtering so diffs fit inside an LLM context window.",
+  "category": "Developer Tools",
+  "language": "typescript",
+  "mcp_compatible": true,
+  "author": {
+    "name": "Jean Patrick",
+    "github": "phjpdev"
+  },
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "action": {
+        "type": "string",
+        "description": "Action to perform: 'metadata' for PR details, 'files' for per-file patches, 'diff' for the raw unified diff, or 'review_context' for an LLM-ready review payload",
+        "enum": ["metadata", "files", "diff", "review_context"],
+        "default": "review_context"
+      },
+      "pr_url": {
+        "type": "string",
+        "description": "Full pull request URL, e.g. https://github.com/owner/repo/pull/123. Supplying this overrides owner, repo, and pull_number."
+      },
+      "owner": {
+        "type": "string",
+        "description": "Repository owner or organization (required unless pr_url is supplied)"
+      },
+      "repo": {
+        "type": "string",
+        "description": "Repository name (required unless pr_url is supplied)"
+      },
+      "pull_number": {
+        "type": "integer",
+        "description": "Pull request number (required unless pr_url is supplied)"
+      },
+      "max_files": {
+        "type": "integer",
+        "description": "Maximum number of changed files to return (1-300, default 100)",
+        "default": 100
+      },
+      "max_patch_chars": {
+        "type": "integer",
+        "description": "Maximum characters kept per file patch before truncation (200-100000, default 6000)",
+        "default": 6000
+      },
+      "max_diff_chars": {
+        "type": "integer",
+        "description": "Maximum characters kept for the raw diff when action is 'diff' (500-1000000, default 100000)",
+        "default": 100000
+      },
+      "include_patch": {
+        "type": "boolean",
+        "description": "Include the unified patch body for each file. Set false for a lightweight file-name-only summary.",
+        "default": true
+      },
+      "exclude_patterns": {
+        "type": "array",
+        "description": "Glob patterns for files to skip. Defaults to lockfiles and minified assets so generated churn does not consume the model's context.",
+        "items": { "type": "string" }
+      },
+      "github_token": {
+        "type": "string",
+        "description": "GitHub personal access token. Falls back to the GITHUB_TOKEN environment variable. Optional for public repositories."
+      }
+    },
+    "required": ["action"]
+  },
+  "env_vars": [
+    "GITHUB_TOKEN"
+  ]
+}
