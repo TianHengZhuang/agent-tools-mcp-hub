@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Good First Issues](https://img.shields.io/github/issues/community/good-first-issue?label=good%20first%20issues&color=blue)](https://github.com/tarunjandra/agent-tools-mcp-hub/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
-[![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#-contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-16-orange.svg?style=flat-square)](#-contributors)
 
 A curated, plug-and-play collection of **AI Agent Tools**, **Model Context Protocol (MCP)** servers, and integration connectors for modern AI agents (LangChain, CrewAI, AutoGen, OpenAI Swarm).
 
@@ -44,6 +44,7 @@ Building AI agents requires connecting them to real-world APIs, tools, and datab
 | [`spotify_player`](tools/spotify_player/) | Media | Python | ✅ | Fetch the currently playing track and the user's private/public playlists from Spotify. |
 | [`pdf_text_extractor`](tools/pdf_text_extractor/) | Utilities | Python | ✅ | Extract plain text from local PDF files using pypdf. |
 | [`brave_search`](tools/brave_search/) | Search & Web | Python | ✅ | Queries the Brave Search REST API for privacy-first web results with titles, URLs, snippets and freshness filters. |
+| [`discord_webhook_announcer_ts`](tools/discord_webhook_announcer_ts/) | Communication | TypeScript | ✅ | Sends Discord notifications and rich embed announcements through a Discord webhook URL. |
 | *[Add your tool here!](CONTRIBUTING.md)* | *Any* | *Any* | *Any* | *Submit a pull request in 15 minutes!* |
 
 ---
@@ -114,6 +115,7 @@ Thanks to these wonderful people for contributing to the Agent Tools Hub!
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/anirudhatalmale6-alt"><img src="https://avatars.githubusercontent.com/anirudhatalmale6-alt" width="80px;" alt="Anirudha Talmale"/><br /><sub><b>Anirudha Talmale</b></sub></a><br />💻 🔍</td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/usamnang-cmyk"><img src="https://avatars.githubusercontent.com/usamnang-cmyk" width="80px;" alt="Samnang Uy"/><br /><sub><b>Samnang Uy</b></sub></a><br />💻 📡</td>
     </tr>
   </tbody>
 </table>
