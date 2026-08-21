@@ -1,5 +1,5 @@
 {
-  "total_tools": 18,
+  "total_tools": 19,
   "tools": [
     {
       "name": "arxiv_search",
@@ -447,6 +447,42 @@
       },
       "env_vars": [
         "SLACK_WEBHOOK_URL"
+      ]
+    },
+    {
+      "name": "spotify_player",
+      "display_name": "Spotify Current Track & Playlists",
+      "description": "Fetch the currently playing track and the user's private/public playlists from Spotify.",
+      "category": "Media",
+      "language": "python",
+      "mcp_compatible": true,
+      "author": {
+        "name": "Mukunt",
+        "github": "Mukunt07"
+      },
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "description": "Action to perform: 'current_track' or 'playlists'",
+            "enum": [
+              "current_track",
+              "playlists"
+            ]
+          },
+          "limit": {
+            "type": "integer",
+            "description": "Maximum number of playlists to return (default 10)",
+            "default": 10
+          }
+        },
+        "required": [
+          "action"
+        ]
+      },
+      "env_vars": [
+        "SPOTIFY_ACCESS_TOKEN"
       ]
     },
     {

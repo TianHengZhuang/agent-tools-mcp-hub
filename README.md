@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Good First Issues](https://img.shields.io/github/issues/community/good-first-issue?label=good%20first%20issues&color=blue)](https://github.com/tarunjandra/agent-tools-mcp-hub/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
-[![All Contributors](https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square)](#-contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#-contributors)
 
 A curated, plug-and-play collection of **AI Agent Tools**, **Model Context Protocol (MCP)** servers, and integration connectors for modern AI agents (LangChain, CrewAI, AutoGen, OpenAI Swarm).
 
@@ -41,6 +41,7 @@ Building AI agents requires connecting them to real-world APIs, tools, and datab
 | [`qr_code_generator`](tools/qr_code_generator/) | Utilities | Python | ✅ | Generates QR code images from URLs or text strings and returns them as base64-encoded PNG data. |
 | [`hackernews_profile_ts`](tools/hackernews_profile_ts/) | Search & Web | TypeScript | ✅ | Fetches HackerNews user profiles with karma, creation date, and submission count. |
 | [`github_repo_info`](tools/github_repo_info/) | Developer Tools | Python | ✅ | Fetches public metadata for any GitHub repository — stars, forks, primary language, open issues, license, topics and description. |
+| [`spotify_player`](tools/spotify_player/) | Media | Python | ✅ | Fetch the currently playing track and the user's private/public playlists from Spotify. |
 | *[Add your tool here!](CONTRIBUTING.md)* | *Any* | *Any* | *Any* | *Submit a pull request in 15 minutes!* |
 
 ---
@@ -106,6 +107,7 @@ Thanks to these wonderful people for contributing to the Agent Tools Hub!
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ace-ai-controller"><img src="https://avatars.githubusercontent.com/ace-ai-controller" width="80px;" alt="ace-ai-controller"/><br /><sub><b>ace-ai-controller</b></sub></a><br />💻 🛠️</td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Lucas-doyle"><img src="https://avatars.githubusercontent.com/Lucas-doyle" width="80px;" alt="Lucas-doyle"/><br /><sub><b>Lucas-doyle</b></sub></a><br />💻 📰</td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/securetechs"><img src="https://avatars.githubusercontent.com/securetechs" width="80px;" alt="securetechs"/><br /><sub><b>securetechs</b></sub></a><br />💻 🐙</td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Mukunt07"><img src="https://avatars.githubusercontent.com/Mukunt07" width="80px;" alt="Mukunt07"/><br /><sub><b>Mukunt07</b></sub></a><br />💻 🎵</td>
     </tr>
   </tbody>
 </table>
