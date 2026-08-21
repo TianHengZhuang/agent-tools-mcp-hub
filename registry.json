@@ -1,5 +1,5 @@
 {
-  "total_tools": 22,
+  "total_tools": 24,
   "tools": [
     {
       "name": "arxiv_search",
@@ -262,6 +262,56 @@
       "env_vars": []
     },
     {
+      "name": "gemini_embeddings",
+      "display_name": "Google Gemini / Vertex AI Embeddings",
+      "description": "Generate text embeddings for semantic search using the Google Generative AI Python SDK (Gemini API) or Vertex AI.",
+      "category": "AI Integration",
+      "language": "python",
+      "mcp_compatible": true,
+      "author": {
+        "name": "golden-dragon-dev",
+        "github": "golden-dragon-dev"
+      },
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Text to embed (single string)."
+          },
+          "texts": {
+            "type": "array",
+            "description": "Optional list of texts to embed in one call. If set, this is used instead of query."
+          },
+          "model": {
+            "type": "string",
+            "description": "Embedding model id. Default: models/text-embedding-004"
+          },
+          "task_type": {
+            "type": "string",
+            "description": "One of: retrieval_query, retrieval_document, semantic_similarity, classification, clustering. Default: retrieval_document"
+          },
+          "title": {
+            "type": "string",
+            "description": "Optional document title. Only used with task_type=retrieval_document."
+          },
+          "provider": {
+            "type": "string",
+            "description": "gemini or vertex. Default: gemini"
+          }
+        },
+        "required": [
+          "query"
+        ]
+      },
+      "env_vars": [
+        "GOOGLE_API_KEY",
+        "GEMINI_API_KEY",
+        "GOOGLE_CLOUD_PROJECT",
+        "GOOGLE_CLOUD_LOCATION"
+      ]
+    },
+    {
       "name": "github_repo_info",
       "display_name": "GitHub Repository Info",
       "description": "Fetches public metadata for any GitHub repository \u2014 stars, forks, primary language, open issues, license, topics and description \u2014 using the public GitHub REST API. No API key required (an optional GITHUB_TOKEN raises the rate limit).",
@@ -286,6 +336,47 @@
       },
       "env_vars": [
         "GITHUB_TOKEN"
+      ]
+    },
+    {
+      "name": "google_custom_search",
+      "display_name": "Google Custom Search",
+      "description": "Searches the web via Google's Custom Search JSON API and returns the top matching links with titles and snippets.",
+      "category": "Search & Web",
+      "language": "python",
+      "mcp_compatible": true,
+      "author": {
+        "name": "Trung Nguyen",
+        "github": "JacobTurner0321"
+      },
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Search query keywords (e.g. 'model context protocol')"
+          },
+          "num": {
+            "type": "integer",
+            "description": "Number of results to return (1-10, default 5)",
+            "default": 5
+          },
+          "api_key": {
+            "type": "string",
+            "description": "Google Cloud API key. Reads GOOGLE_CSE_API_KEY (or GOOGLE_API_KEY) if omitted."
+          },
+          "cx": {
+            "type": "string",
+            "description": "Programmable Search Engine ID. Reads GOOGLE_CSE_ID if omitted."
+          }
+        },
+        "required": [
+          "query"
+        ]
+      },
+      "env_vars": [
+        "GOOGLE_CSE_API_KEY",
+        "GOOGLE_CSE_ID"
       ]
     },
     {
