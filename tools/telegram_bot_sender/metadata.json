@@ -1,0 +1,32 @@
+{
+  "name": "telegram_bot_sender",
+  "display_name": "Telegram Bot Message Sender",
+  "description": "Send agent alerts and text messages to Telegram chats using the Telegram Bot API.",
+  "category": "Communication",
+  "language": "python",
+  "mcp_compatible": true,
+  "author": {
+    "name": "ImpactEngineer87",
+    "github": "ImpactEngineer87"
+  },
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "description": "The message text to send"
+      },
+      "chat_id": {
+        "type": "string",
+        "description": "Telegram chat, group, or channel ID"
+      }
+    },
+    "required": [
+      "query",
+      "chat_id"
+    ]
+  },
+  "env_vars": [
+    "TELEGRAM_BOT_TOKEN"
+  ]
+}
