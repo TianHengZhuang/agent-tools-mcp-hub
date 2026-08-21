@@ -41,6 +41,7 @@ Building AI agents requires connecting them to real-world APIs, tools, and datab
 | [`qr_code_generator`](tools/qr_code_generator/) | Utilities | Python | ✅ | Generates QR code images from URLs or text strings and returns them as base64-encoded PNG data. |
 | [`hackernews_profile_ts`](tools/hackernews_profile_ts/) | Search & Web | TypeScript | ✅ | Fetches HackerNews user profiles with karma, creation date, and submission count. |
 | [`github_repo_info`](tools/github_repo_info/) | Developer Tools | Python | ✅ | Fetches public metadata for any GitHub repository — stars, forks, primary language, open issues, license, topics and description. |
+| [`github_issue_pr_manager`](tools/github_issue_pr_manager/) | Developer Tools | Python | ✅ | Lists GitHub issues/PRs and creates issues/comments for repositories via GitHub REST API. |
 | [`spotify_player`](tools/spotify_player/) | Media | Python | ✅ | Fetch the currently playing track and the user's private/public playlists from Spotify. |
 | [`pdf_text_extractor`](tools/pdf_text_extractor/) | Utilities | Python | ✅ | Extract plain text from local PDF files using pypdf. |
 | [`brave_search`](tools/brave_search/) | Search & Web | Python | ✅ | Queries the Brave Search REST API for privacy-first web results with titles, URLs, snippets and freshness filters. |
