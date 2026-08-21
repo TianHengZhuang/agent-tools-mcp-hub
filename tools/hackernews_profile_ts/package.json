@@ -1,0 +1,24 @@
+{
+  "name": "hackernews-profile-ts",
+  "version": "1.0.0",
+  "description": "HackerNews User Profile & Karma Checker - TypeScript Implementation",
+  "main": "index.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node index.ts",
+    "dist": "node dist/index.js"
+  },
+  "keywords": [
+    "hackernews",
+    "api",
+    "typescript",
+    "mcp"
+  ],
+  "author": "Assessment Candidate",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0"
+  }
+}
