@@ -39,6 +39,25 @@ const result = await sendDiscordAnnouncement(
 console.log(result);
 ```
 
+## Agent / MCP entry point
+
+`runTool` takes a single params object matching the `parameters` schema in
+`metadata.json` — the shape an MCP server or agent framework passes in:
+
+```typescript
+import { runTool } from "./index";
+
+const result = await runTool({
+  webhookUrl: process.env.DISCORD_WEBHOOK_URL!,
+  message: "Deployment completed successfully.",
+  title: "Production Update"
+});
+// -> { success: true, status: 204, message: "Discord announcement sent successfully." }
+```
+
+On failure it resolves (never throws) to `{ success: false, error: "..." }`,
+with `status` included when Discord returned an HTTP error.
+
 ## Parameters
 
 | Parameter | Type | Required | Description |

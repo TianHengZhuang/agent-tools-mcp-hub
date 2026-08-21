@@ -16,6 +16,14 @@ interface DiscordEmbed {
   timestamp?: string;
 }
 
+interface DiscordAnnouncementParams {
+  webhookUrl: string;
+  message: string;
+  title?: string;
+  username?: string;
+  color?: number;
+}
+
 async function sendDiscordAnnouncement(
   webhookUrl: string,
   message: string,
@@ -94,23 +102,37 @@ async function sendDiscordAnnouncement(
   }
 }
 
+/**
+ * Agent entry point. Accepts a single params object matching the
+ * `parameters` schema in metadata.json, which is the shape an MCP
+ * server or agent framework passes in.
+ */
 async function runTool(
-  webhookUrl: string,
-  message: string,
-  title: string = "Announcement",
-  username: string = "Agent Tools Hub",
-  color: number = 3447003
+  params: DiscordAnnouncementParams
 ): Promise<DiscordWebhookResult> {
-  return sendDiscordAnnouncement(
-    webhookUrl,
-    message,
-    title,
-    username,
-    color
-  );
+  const { webhookUrl, message, title, username, color } = params;
+  return sendDiscordAnnouncement(webhookUrl, message, title, username, color);
 }
 
 export {
   sendDiscordAnnouncement,
   runTool
 };
+export type { DiscordAnnouncementParams, DiscordWebhookResult };
+
+// Manual smoke test: `DISCORD_WEBHOOK_URL=... node dist/index.js`
+if (require.main === module) {
+  (async () => {
+    const webhookUrl = process.env.DISCORD_WEBHOOK_URL;
+    if (!webhookUrl) {
+      console.error("Set DISCORD_WEBHOOK_URL to run this smoke test.");
+      process.exit(1);
+    }
+    const result = await runTool({
+      webhookUrl,
+      message: "Discord Webhook Announcer smoke test.",
+      title: "Agent Tools Hub"
+    });
+    console.log(JSON.stringify(result, null, 2));
+  })();
+}
