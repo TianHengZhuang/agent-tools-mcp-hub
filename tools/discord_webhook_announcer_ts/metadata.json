@@ -12,7 +12,7 @@
   "parameters": {
     "type": "object",
     "properties": {
-      "webhook_url": {
+      "webhookUrl": {
         "type": "string",
         "description": "Discord webhook URL"
       },
@@ -37,7 +37,7 @@
       }
     },
     "required": [
-      "webhook_url",
+      "webhookUrl",
       "message"
     ]
   },
