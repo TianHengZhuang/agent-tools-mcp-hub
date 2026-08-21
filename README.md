@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Good First Issues](https://img.shields.io/github/issues/community/good-first-issue?label=good%20first%20issues&color=blue)](https://github.com/tarunjandra/agent-tools-mcp-hub/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
-[![All Contributors](https://img.shields.io/badge/all_contributors-26-orange.svg?style=flat-square)](#-contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-27-orange.svg?style=flat-square)](#-contributors)
 
 A curated, plug-and-play collection of **AI Agent Tools**, **Model Context Protocol (MCP)** servers, and integration connectors for modern AI agents (LangChain, CrewAI, AutoGen, OpenAI Swarm).
 
@@ -55,6 +55,7 @@ Building AI agents requires connecting them to real-world APIs, tools, and datab
 | [`gemini_embeddings`](tools/gemini_embeddings/) | AI Integration | Python | ✅ | Generate text embeddings for semantic search using the Google Generative AI Python SDK (Gemini API) or Vertex AI. |
 | [`google_custom_search`](tools/google_custom_search/) | Search & Web | Python | ✅ | Searches the web via Google's Custom Search JSON API and returns the top matching links with titles and snippets. |
 | [`supabase_table_query`](tools/supabase_table_query/) | Database | TypeScript | ✅ | Query and insert rows in a Supabase Postgres table using @supabase/supabase-js. |
+| [`postgres_query_runner`](tools/postgres_query_runner/) | Database | Python | ✅ | Execute parameterized, read-only SQL queries against a PostgreSQL database using psycopg2. |
 | [`telegram_bot_sender`](tools/telegram_bot_sender/) | Communication | Python | ✅ | Send agent alerts and text messages to Telegram chats using the Telegram Bot API. |
 | [`twilio_sms_alert`](tools/twilio_sms_alert/) | Communication | Python | ✅ | Sends critical SMS alert notifications via the Twilio Programmable Messaging API for agent workflows. |
 | [`twitter_x_post_creator_ts`](tools/twitter_x_post_creator_ts/) | Communication | TypeScript | ✅ | Create automated text posts using the X API v2. |
@@ -142,6 +143,7 @@ Thanks to these wonderful people for contributing to the Agent Tools Hub!
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ricardo4453"><img src="https://avatars.githubusercontent.com/ricardo4453" width="80px;" alt="ricardo4453"/><br /><sub><b>ricardo4453</b></sub></a><br />💻 💬</td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/tomwork0427"><img src="https://avatars.githubusercontent.com/tomwork0427" width="80px;" alt="tomwork0427"/><br /><sub><b>tomwork0427</b></sub></a><br />💻 🔍</td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/goldenstar9393"><img src="https://avatars.githubusercontent.com/goldenstar9393" width="80px;" alt="goldenstar9393"/><br /><sub><b>goldenstar9393</b></sub></a><br />💻 🛡️</td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/dobrivoje0101"><img src="https://avatars.githubusercontent.com/dobrivoje0101" width="80px;" alt="Dobrivoje"/><br /><sub><b>Dobrivoje</b></sub></a><br />💻 🗄️</td>
     </tr>
   </tbody>
 </table>
