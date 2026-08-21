@@ -1,0 +1,48 @@
+{
+  "name": "gemini_embeddings",
+  "display_name": "Google Gemini / Vertex AI Embeddings",
+  "description": "Generate text embeddings for semantic search using the Google Generative AI Python SDK (Gemini API) or Vertex AI.",
+  "category": "AI Integration",
+  "language": "python",
+  "mcp_compatible": true,
+  "author": {
+    "name": "golden-dragon-dev",
+    "github": "golden-dragon-dev"
+  },
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "description": "Text to embed (single string)."
+      },
+      "texts": {
+        "type": "array",
+        "description": "Optional list of texts to embed in one call. If set, this is used instead of query."
+      },
+      "model": {
+        "type": "string",
+        "description": "Embedding model id. Default: models/text-embedding-004"
+      },
+      "task_type": {
+        "type": "string",
+        "description": "One of: retrieval_query, retrieval_document, semantic_similarity, classification, clustering. Default: retrieval_document"
+      },
+      "title": {
+        "type": "string",
+        "description": "Optional document title. Only used with task_type=retrieval_document."
+      },
+      "provider": {
+        "type": "string",
+        "description": "gemini or vertex. Default: gemini"
+      }
+    },
+    "required": ["query"]
+  },
+  "env_vars": [
+    "GOOGLE_API_KEY",
+    "GEMINI_API_KEY",
+    "GOOGLE_CLOUD_PROJECT",
+    "GOOGLE_CLOUD_LOCATION"
+  ]
+}
