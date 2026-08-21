@@ -1,5 +1,5 @@
 {
-  "total_tools": 32,
+  "total_tools": 33,
   "tools": [
     {
       "name": "arxiv_search",
@@ -1238,6 +1238,33 @@
         "TWILIO_AUTH_TOKEN",
         "TWILIO_FROM_NUMBER",
         "TWILIO_TO_NUMBER"
+      ]
+    },
+    {
+      "name": "twitter_x_post_creator_ts",
+      "display_name": "Twitter / X Post Creator",
+      "description": "Create automated text posts using the X API v2.",
+      "category": "Communication",
+      "language": "typescript",
+      "mcp_compatible": true,
+      "author": {
+        "name": "ImpactEngineer87",
+        "github": "ImpactEngineer87"
+      },
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "description": "Text content of the X post"
+          }
+        },
+        "required": [
+          "text"
+        ]
+      },
+      "env_vars": [
+        "X_USER_ACCESS_TOKEN"
       ]
     },
     {
