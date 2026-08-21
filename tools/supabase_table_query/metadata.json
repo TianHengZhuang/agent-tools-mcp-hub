@@ -1,0 +1,71 @@
+{
+  "name": "supabase_table_query",
+  "display_name": "Supabase Realtime Table Query Tool (TypeScript)",
+  "description": "Query and insert rows in a Supabase Postgres table using @supabase/supabase-js. Supports column selection, filtering, ordering, and pagination.",
+  "category": "Database",
+  "language": "typescript",
+  "mcp_compatible": true,
+  "author": {
+    "name": "jayarbrul03",
+    "github": "jayarbrul03"
+  },
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "action": {
+        "type": "string",
+        "description": "Action to perform: 'query' to read rows or 'insert' to add a row",
+        "enum": ["query", "insert"],
+        "default": "query"
+      },
+      "table": {
+        "type": "string",
+        "description": "Name of the Supabase table to query or insert into"
+      },
+      "columns": {
+        "type": "string",
+        "description": "Comma-separated column names to select (default '*' for all columns)"
+      },
+      "filters": {
+        "type": "array",
+        "description": "Array of filter objects with column, operator (eq, neq, gt, gte, lt, lte, like, ilike, in), and value",
+        "items": {
+          "type": "object",
+          "properties": {
+            "column": { "type": "string" },
+            "operator": { "type": "string" },
+            "value": {}
+          }
+        }
+      },
+      "order_by": {
+        "type": "string",
+        "description": "Column name to order results by"
+      },
+      "ascending": {
+        "type": "boolean",
+        "description": "Sort order: true for ascending, false for descending (default true)",
+        "default": true
+      },
+      "limit": {
+        "type": "integer",
+        "description": "Maximum number of rows to return (1-1000, default 50)",
+        "default": 50
+      },
+      "offset": {
+        "type": "integer",
+        "description": "Number of rows to skip for pagination (default 0)",
+        "default": 0
+      },
+      "row": {
+        "type": "object",
+        "description": "Row data to insert (required when action is 'insert')"
+      }
+    },
+    "required": ["table"]
+  },
+  "env_vars": [
+    "SUPABASE_URL",
+    "SUPABASE_ANON_KEY"
+  ]
+}
