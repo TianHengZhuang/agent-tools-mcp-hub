@@ -1,0 +1,30 @@
+{
+  "name": "supabase-table-query",
+  "version": "1.0.0",
+  "description": "Supabase Realtime Table Query Tool - TypeScript implementation for AI Agents & MCP Hub",
+  "main": "index.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node index.ts",
+    "dist": "node dist/index.js"
+  },
+  "keywords": [
+    "supabase",
+    "postgres",
+    "database",
+    "api",
+    "typescript",
+    "mcp",
+    "agent-tools"
+  ],
+  "author": "jayarbrul03",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0"
+  }
+}
