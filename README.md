@@ -75,7 +75,7 @@ print(results)
 
 ### TypeScript / MCP Example
 ```bash
-cd tools/github_issue_fetcher
+cd tools/hackernews_profile_ts
 npm install
 npm run build
 npm start
