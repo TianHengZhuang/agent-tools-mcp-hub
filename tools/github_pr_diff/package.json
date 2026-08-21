@@ -1,0 +1,27 @@
+{
+  "name": "github-pr-diff",
+  "version": "1.0.0",
+  "description": "GitHub PR Code Review Diff Tool - TypeScript implementation for AI Agents & MCP Hub",
+  "main": "index.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node index.ts",
+    "dist": "node dist/index.js"
+  },
+  "keywords": [
+    "github",
+    "pull-request",
+    "diff",
+    "code-review",
+    "typescript",
+    "mcp",
+    "agent-tools"
+  ],
+  "author": "jayarbrul03",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0"
+  }
+}
