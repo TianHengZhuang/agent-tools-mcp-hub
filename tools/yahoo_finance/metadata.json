@@ -1,0 +1,23 @@
+{
+  "name": "yahoo_finance",
+  "display_name": "Yahoo Finance Stock Quote",
+  "description": "A tool to fetch current stock quotes and basic company info using Yahoo Finance.",
+  "category": "Finance",
+  "language": "python",
+  "mcp_compatible": true,
+  "author": {
+    "name": "Antigravity Agent",
+    "github": "tarunjandra"
+  },
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "ticker": {
+        "type": "string",
+        "description": "The stock ticker symbol (e.g., 'AAPL', 'MSFT')"
+      }
+    },
+    "required": ["ticker"]
+  },
+  "env_vars": []
+}
