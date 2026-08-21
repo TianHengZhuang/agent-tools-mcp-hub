@@ -1,0 +1,23 @@
+{
+  "name": "github_repo_info",
+  "display_name": "GitHub Repository Info",
+  "description": "Fetches public metadata for any GitHub repository — stars, forks, primary language, open issues, license, topics and description — using the public GitHub REST API. No API key required (an optional GITHUB_TOKEN raises the rate limit).",
+  "category": "Developer Tools",
+  "language": "python",
+  "mcp_compatible": true,
+  "author": {
+    "name": "SecureTechs",
+    "github": "securetechs"
+  },
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "description": "Repository in 'owner/repo' format, e.g. 'openai/openai-python'"
+      }
+    },
+    "required": ["query"]
+  },
+  "env_vars": ["GITHUB_TOKEN"]
+}
