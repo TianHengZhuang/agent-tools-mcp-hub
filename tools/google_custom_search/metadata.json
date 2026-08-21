@@ -1,0 +1,39 @@
+{
+  "name": "google_custom_search",
+  "display_name": "Google Custom Search",
+  "description": "Searches the web via Google's Custom Search JSON API and returns the top matching links with titles and snippets.",
+  "category": "Search & Web",
+  "language": "python",
+  "mcp_compatible": true,
+  "author": {
+    "name": "Trung Nguyen",
+    "github": "JacobTurner0321"
+  },
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "description": "Search query keywords (e.g. 'model context protocol')"
+      },
+      "num": {
+        "type": "integer",
+        "description": "Number of results to return (1-10, default 5)",
+        "default": 5
+      },
+      "api_key": {
+        "type": "string",
+        "description": "Google Cloud API key. Reads GOOGLE_CSE_API_KEY (or GOOGLE_API_KEY) if omitted."
+      },
+      "cx": {
+        "type": "string",
+        "description": "Programmable Search Engine ID. Reads GOOGLE_CSE_ID if omitted."
+      }
+    },
+    "required": ["query"]
+  },
+  "env_vars": [
+    "GOOGLE_CSE_API_KEY",
+    "GOOGLE_CSE_ID"
+  ]
+}
