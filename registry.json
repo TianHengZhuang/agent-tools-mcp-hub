@@ -1,5 +1,5 @@
 {
-  "total_tools": 12,
+  "total_tools": 14,
   "tools": [
     {
       "name": "arxiv_search",
@@ -58,6 +58,35 @@
         },
         "required": [
           "coin_id"
+        ]
+      },
+      "env_vars": []
+    },
+    {
+      "name": "crypto_price_tracker",
+      "display_name": "Crypto Price Tracker",
+      "description": "A tool to fetch the current price of cryptocurrencies using the CoinGecko API.",
+      "category": "Finance",
+      "language": "python",
+      "mcp_compatible": true,
+      "author": {
+        "name": "Antigravity Agent",
+        "github": "tarunjandra"
+      },
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "coin_ids": {
+            "type": "string",
+            "description": "Comma-separated list of cryptocurrency ids (e.g., 'bitcoin,ethereum')"
+          },
+          "currency": {
+            "type": "string",
+            "description": "The target currency to check the price in (e.g., 'usd', 'eur'). Defaults to 'usd'."
+          }
+        },
+        "required": [
+          "coin_ids"
         ]
       },
       "env_vars": []
@@ -123,6 +152,84 @@
         },
         "required": [
           "query"
+        ]
+      },
+      "env_vars": []
+    },
+    {
+      "name": "hackernews_profile",
+      "display_name": "HackerNews Profile & Karma Checker",
+      "description": "Fetches HackerNews user profiles with karma, creation date, and submission count. Also retrieves top stories with scores and comment counts.",
+      "category": "Search & Web",
+      "language": "python",
+      "mcp_compatible": true,
+      "author": {
+        "name": "Liang Zhengtao",
+        "github": "liangzhengtao"
+      },
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "HackerNews username to look up"
+          },
+          "action": {
+            "type": "string",
+            "description": "Action to perform: 'profile' for user profile, 'top' for top stories",
+            "enum": [
+              "profile",
+              "top"
+            ],
+            "default": "profile"
+          },
+          "limit": {
+            "type": "integer",
+            "description": "Number of top stories to return (default 10)",
+            "default": 10
+          }
+        },
+        "required": [
+          "username"
+        ]
+      },
+      "env_vars": []
+    },
+    {
+      "name": "hackernews_profile_ts",
+      "display_name": "HackerNews Profile & Karma Checker (TypeScript)",
+      "description": "Fetches HackerNews user profiles with karma, creation date, and submission count. Also retrieves top stories with scores and comment counts. TypeScript implementation.",
+      "category": "Search & Web",
+      "language": "typescript",
+      "mcp_compatible": true,
+      "author": {
+        "name": "Assessment Candidate",
+        "github": "candidate-username"
+      },
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "HackerNews username to look up"
+          },
+          "action": {
+            "type": "string",
+            "description": "Action to perform: 'profile' for user profile, 'top' for top stories",
+            "enum": [
+              "profile",
+              "top"
+            ],
+            "default": "profile"
+          },
+          "limit": {
+            "type": "integer",
+            "description": "Number of top stories to return (default 10)",
+            "default": 10
+          }
+        },
+        "required": [
+          "username"
         ]
       },
       "env_vars": []
@@ -342,45 +449,6 @@
         },
         "required": [
           "query"
-        ]
-      },
-      "env_vars": []
-    },
-    {
-      "name": "hackernews_profile",
-      "display_name": "HackerNews Profile & Karma Checker",
-      "description": "Fetches HackerNews user profiles with karma, creation date, and submission count. Also retrieves top stories with scores and comment counts.",
-      "category": "Search & Web",
-      "language": "python",
-      "mcp_compatible": true,
-      "author": {
-        "name": "Liang Zhengtao",
-        "github": "liangzhengtao"
-      },
-      "parameters": {
-        "type": "object",
-        "properties": {
-          "username": {
-            "type": "string",
-            "description": "HackerNews username to look up"
-          },
-          "action": {
-            "type": "string",
-            "description": "Action: profile or top",
-            "enum": [
-              "profile",
-              "top"
-            ],
-            "default": "profile"
-          },
-          "limit": {
-            "type": "integer",
-            "description": "Number of top stories (default 10)",
-            "default": 10
-          }
-        },
-        "required": [
-          "username"
         ]
       },
       "env_vars": []
