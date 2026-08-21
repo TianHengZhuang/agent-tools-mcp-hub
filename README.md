@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Good First Issues](https://img.shields.io/github/issues/community/good-first-issue?label=good%20first%20issues&color=blue)](https://github.com/tarunjandra/agent-tools-mcp-hub/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
-[![All Contributors](https://img.shields.io/badge/all_contributors-14-orange.svg?style=flat-square)](#-contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-15-orange.svg?style=flat-square)](#-contributors)
 
 A curated, plug-and-play collection of **AI Agent Tools**, **Model Context Protocol (MCP)** servers, and integration connectors for modern AI agents (LangChain, CrewAI, AutoGen, OpenAI Swarm).
 
@@ -43,6 +43,7 @@ Building AI agents requires connecting them to real-world APIs, tools, and datab
 | [`github_repo_info`](tools/github_repo_info/) | Developer Tools | Python | ✅ | Fetches public metadata for any GitHub repository — stars, forks, primary language, open issues, license, topics and description. |
 | [`spotify_player`](tools/spotify_player/) | Media | Python | ✅ | Fetch the currently playing track and the user's private/public playlists from Spotify. |
 | [`pdf_text_extractor`](tools/pdf_text_extractor/) | Utilities | Python | ✅ | Extract plain text from local PDF files using pypdf. |
+| [`brave_search`](tools/brave_search/) | Search & Web | Python | ✅ | Queries the Brave Search REST API for privacy-first web results with titles, URLs, snippets and freshness filters. |
 | *[Add your tool here!](CONTRIBUTING.md)* | *Any* | *Any* | *Any* | *Submit a pull request in 15 minutes!* |
 
 ---
@@ -110,6 +111,9 @@ Thanks to these wonderful people for contributing to the Agent Tools Hub!
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/securetechs"><img src="https://avatars.githubusercontent.com/securetechs" width="80px;" alt="securetechs"/><br /><sub><b>securetechs</b></sub></a><br />💻 🐙</td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Mukunt07"><img src="https://avatars.githubusercontent.com/Mukunt07" width="80px;" alt="Mukunt07"/><br /><sub><b>Mukunt07</b></sub></a><br />💻 🎵</td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ayesha8087"><img src="https://avatars.githubusercontent.com/ayesha8087" width="80px;" alt="ayesha8087"/><br /><sub><b>ayesha8087</b></sub></a><br />💻 📄</td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/anirudhatalmale6-alt"><img src="https://avatars.githubusercontent.com/anirudhatalmale6-alt" width="80px;" alt="Anirudha Talmale"/><br /><sub><b>Anirudha Talmale</b></sub></a><br />💻 🔍</td>
     </tr>
   </tbody>
 </table>
