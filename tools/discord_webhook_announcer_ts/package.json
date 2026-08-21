@@ -1,0 +1,22 @@
+{
+  "name": "discord-webhook-announcer-ts",
+  "version": "1.0.0",
+  "description": "Send Discord webhook notifications and rich embed announcements from TypeScript.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "discord",
+    "webhook",
+    "typescript",
+    "mcp"
+  ],
+  "author": "Samnang Uy",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
