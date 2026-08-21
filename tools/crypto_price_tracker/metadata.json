@@ -1,0 +1,27 @@
+{
+  "name": "crypto_price_tracker",
+  "display_name": "Crypto Price Tracker",
+  "description": "A tool to fetch the current price of cryptocurrencies using the CoinGecko API.",
+  "category": "Finance",
+  "language": "python",
+  "mcp_compatible": true,
+  "author": {
+    "name": "Antigravity Agent",
+    "github": "tarunjandra"
+  },
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "coin_ids": {
+        "type": "string",
+        "description": "Comma-separated list of cryptocurrency ids (e.g., 'bitcoin,ethereum')"
+      },
+      "currency": {
+        "type": "string",
+        "description": "The target currency to check the price in (e.g., 'usd', 'eur'). Defaults to 'usd'."
+      }
+    },
+    "required": ["coin_ids"]
+  },
+  "env_vars": []
+}
