@@ -1,0 +1,29 @@
+{
+  "name": "github_avatar_frame",
+  "display_name": "GitHub Avatar Frame Generator",
+  "description": "Generates a framed GitHub avatar through the public GitHub Avatar Frame API and returns generated, source-avatar, profile, catalog, API, and repository URLs plus base64 image data.",
+  "category": "Utilities",
+  "language": "python",
+  "mcp_compatible": true,
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "username": {"type": "string", "description": "GitHub username whose avatar will be framed."},
+      "theme": {"type": "string", "description": "Frame theme. The current names are loaded from the upstream public/frames directory.", "default": "base"},
+      "size": {"type": "integer", "description": "Image size in pixels (64-1024).", "default": 256},
+      "canvas": {"type": "string", "description": "Canvas background.", "enum": ["light", "dark", "transparent"], "default": "light"},
+      "shape": {"type": "string", "description": "Avatar shape.", "enum": ["circle", "rounded", "rect"], "default": "circle"},
+      "radius": {"type": "integer", "description": "Corner radius for rounded or rectangular avatars.", "default": 25},
+      "output_format": {"type": "string", "description": "Returned image format.", "enum": ["png", "jpg", "svg"], "default": "png"},
+      "text": {"type": "string", "description": "Optional text overlay."},
+      "text_color": {"type": "string", "description": "Text color in hexadecimal notation.", "default": "#ffffff"},
+      "text_size": {"type": "integer", "description": "Text size in pixels (8-100).", "default": 20},
+      "text_position": {"type": "string", "description": "Text overlay position.", "enum": ["top", "bottom", "center"], "default": "bottom"},
+      "emojis": {"type": "string", "description": "Optional comma-separated emoji overlays."},
+      "emoji_size": {"type": "integer", "description": "Emoji size in pixels (16-120).", "default": 40},
+      "emoji_position": {"type": "string", "description": "Emoji overlay position.", "enum": ["top", "bottom", "corners"], "default": "top"}
+    },
+    "required": ["username"]
+  },
+  "env_vars": []
+}
