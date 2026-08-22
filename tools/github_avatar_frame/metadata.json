@@ -5,6 +5,10 @@
   "category": "Utilities",
   "language": "python",
   "mcp_compatible": true,
+  "author": {
+    "name": "Ashmeet",
+    "github": "ashmeet07"
+  },
   "parameters": {
     "type": "object",
     "properties": {
