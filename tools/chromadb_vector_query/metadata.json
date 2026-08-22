@@ -1,0 +1,50 @@
+{
+  "name": "chromadb_vector_query",
+  "display_name": "ChromaDB Vector Store Query",
+  "description": "Runs read-only semantic similarity searches against a local persistent ChromaDB vector database. Accepts either natural-language text or a pre-computed embedding vector, supports metadata and document-content filters, and returns ranked matches with documents, metadata, raw distances and a normalised similarity score where higher is better.",
+  "category": "Database",
+  "language": "python",
+  "mcp_compatible": true,
+  "author": {
+    "name": "Ammar Khan",
+    "github": "ammarhere02"
+  },
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "description": "Natural-language search text, embedded using the collection's own embedding function"
+      },
+      "collection": {
+        "type": "string",
+        "description": "Name of the Chroma collection to search"
+      },
+      "db_path": {
+        "type": "string",
+        "description": "Path to the persistent Chroma database directory",
+        "default": "./chroma_db"
+      },
+      "n_results": {
+        "type": "integer",
+        "description": "Number of matches to return (1-100)",
+        "default": 5
+      },
+      "query_embedding": {
+        "type": "array",
+        "description": "Pre-computed embedding vector. Use instead of 'query' when embeddings are generated externally; avoids loading an embedding model",
+        "items": { "type": "number" }
+      },
+      "where": {
+        "type": "object",
+        "description": "Metadata filter, e.g. {\"source\": \"docs\"}"
+      },
+      "where_document": {
+        "type": "object",
+        "description": "Document content filter, e.g. {\"$contains\": \"invoice\"}"
+      }
+    },
+    "required": ["collection"]
+  },
+  "env_vars": []
+}
