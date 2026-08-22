@@ -1,5 +1,5 @@
 {
-  "total_tools": 43,
+  "total_tools": 44,
   "tools": [
     {
       "name": "arxiv_search",
@@ -1073,6 +1073,79 @@
           "query"
         ]
       }
+    },
+    {
+      "name": "notion_block_appender",
+      "display_name": "Notion Page & Database Block Appender",
+      "description": "Append structured content blocks \u2014 headings, bulleted/numbered lists, code blocks, paragraphs, quotes, to-dos and dividers \u2014 to a Notion page or block using the Notion REST API. Handles Notion's 100-children-per-request and 2000-character rich-text limits automatically, and validates all blocks before making any request.",
+      "category": "productivity",
+      "language": "python",
+      "mcp_compatible": true,
+      "author": {
+        "name": "Dobrivoje",
+        "github": "dobrivoje0101"
+      },
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "page_id": {
+            "type": "string",
+            "description": "The Notion page or block ID to append children to"
+          },
+          "blocks": {
+            "type": "array",
+            "description": "List of block specs to append. Each is an object with a 'type' and 'text' (plus type-specific fields).",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "description": "Block type: heading, bullet, numbered, paragraph, quote, code, todo, or divider"
+                },
+                "text": {
+                  "type": "string",
+                  "description": "Text content of the block"
+                },
+                "level": {
+                  "type": "integer",
+                  "description": "Heading level 1, 2 or 3 (for type=heading)"
+                },
+                "language": {
+                  "type": "string",
+                  "description": "Code language (for type=code), e.g. 'python'"
+                },
+                "checked": {
+                  "type": "boolean",
+                  "description": "Checked state (for type=todo)"
+                }
+              },
+              "required": [
+                "type"
+              ]
+            }
+          },
+          "token": {
+            "type": "string",
+            "description": "Notion integration token. Falls back to NOTION_API_KEY or NOTION_TOKEN env vars"
+          },
+          "notion_version": {
+            "type": "string",
+            "description": "Notion-Version header value (default: 2022-06-28)"
+          }
+        },
+        "required": [
+          "page_id",
+          "blocks"
+        ]
+      },
+      "returns": {
+        "type": "object",
+        "description": "Result containing status, page_id, appended_count, batches, and block_ids on success, or an error message"
+      },
+      "env_vars": [
+        "NOTION_API_KEY",
+        "NOTION_TOKEN"
+      ]
     },
     {
       "name": "open_meteo_weather",

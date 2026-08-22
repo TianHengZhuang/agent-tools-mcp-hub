@@ -66,6 +66,7 @@ Building AI agents requires connecting them to real-world APIs, tools, and datab
 | [`twitter_x_post_creator_ts`](tools/twitter_x_post_creator_ts/) | Communication | TypeScript | ✅ | Create automated text posts using the X API v2. |
 | [`sendgrid_email_dispatcher`](tools/sendgrid_email_dispatcher/) | Communication | Python | ✅ | Send plain-text or HTML emails to recipients using the SendGrid API. |
 | [`crewai_wrapper_demo`](tools/crewai_wrapper_demo/) | Frameworks | Python | ✅ | Adapts any tool in this hub into a CrewAI tool automatically with dynamic Pydantic schemas. |
+| [`notion_block_appender`](tools/notion_block_appender/) | Productivity | Python | ✅ | Append structured content blocks (headings, lists, code, todo) to a Notion page or block. |
 | *[Add your tool here!](CONTRIBUTING.md)* | *Any* | *Any* | *Any* | *Submit a pull request in 15 minutes!* |
 
 ---
