@@ -48,6 +48,7 @@ Building AI agents requires connecting them to real-world APIs, tools, and datab
 | [`github_pr_code_review_diff_ts`](tools/github_pr_code_review_diff_ts/) | Developer Tools | TypeScript | ✅ | Fetches changed files and patch details for an open GitHub pull request for automated code review workflows. |
 | [`jira_ticket_status_fetcher`](tools/jira_ticket_status_fetcher/) | Developer Tools | Python | ✅ | Fetch the status, summary, and description of a Jira ticket using the Jira Cloud REST API. |
 | [`trello_card_creator`](tools/trello_card_creator/) | Developer Tools | Python | ✅ | Create task cards in specified Trello lists using the Trello REST API. |
+| [`docker_container_status`](tools/docker_container_status/) | Developer Tools | Python | ✅ | Queries the local Docker daemon and reports container status, health, and live resource statistics. |
 | [`spotify_player`](tools/spotify_player/) | Media | Python | ✅ | Fetch the currently playing track and the user's private/public playlists from Spotify. |
 | [`pdf_text_extractor`](tools/pdf_text_extractor/) | Utilities | Python | ✅ | Extract plain text from local PDF files using pypdf. |
 | [`public_holiday_lookup`](tools/public_holiday_lookup/) | Utilities | Python | ✅ | Retrieves public holiday dates for an ISO country code and calendar year using the free Nager.Date API. |
@@ -58,10 +59,12 @@ Building AI agents requires connecting them to real-world APIs, tools, and datab
 | [`supabase_table_query`](tools/supabase_table_query/) | Database | TypeScript | ✅ | Query and insert rows in a Supabase Postgres table using @supabase/supabase-js. |
 | [`postgres_query_runner`](tools/postgres_query_runner/) | Database | Python | ✅ | Execute parameterized, read-only SQL queries against a PostgreSQL database using psycopg2. |
 | [`redis_key_value_store`](tools/redis_key_value_store/) | Database | Python | ✅ | Get and set cached values in a Redis instance with optional TTL expiration. |
+| [`chromadb_vector_query`](tools/chromadb_vector_query/) | Database | Python | ✅ | Runs semantic similarity searches against a local persistent ChromaDB vector database. |
 | [`telegram_bot_sender`](tools/telegram_bot_sender/) | Communication | Python | ✅ | Send agent alerts and text messages to Telegram chats using the Telegram Bot API. |
 | [`twilio_sms_alert`](tools/twilio_sms_alert/) | Communication | Python | ✅ | Sends critical SMS alert notifications via the Twilio Programmable Messaging API for agent workflows. |
 | [`twitter_x_post_creator_ts`](tools/twitter_x_post_creator_ts/) | Communication | TypeScript | ✅ | Create automated text posts using the X API v2. |
 | [`sendgrid_email_dispatcher`](tools/sendgrid_email_dispatcher/) | Communication | Python | ✅ | Send plain-text or HTML emails to recipients using the SendGrid API. |
+| [`crewai_wrapper_demo`](tools/crewai_wrapper_demo/) | Frameworks | Python | ✅ | Adapts any tool in this hub into a CrewAI tool automatically with dynamic Pydantic schemas. |
 | *[Add your tool here!](CONTRIBUTING.md)* | *Any* | *Any* | *Any* | *Submit a pull request in 15 minutes!* |
 
 ---
