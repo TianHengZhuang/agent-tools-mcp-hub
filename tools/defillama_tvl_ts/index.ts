@@ -114,6 +114,10 @@ export async function runTool(query: string): Promise<ExplorerResult> {
       queryType = "chain";
       tvl = chain.tvl;
       distribution[chain.name] = chain.tvl;
+      const history = await request<Array<{ date: number; tvl: number }>>(
+        `/v2/historicalChainTvl/${encodeURIComponent(chain.name)}`
+      );
+      change = change24h(history.map((point) => ({ date: point.date, totalLiquidityUSD: point.tvl })));
     }
 
     const pools = await request<PoolsResponse>("/pools", YIELDS_API);
