@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Good First Issues](https://img.shields.io/github/issues/community/good-first-issue?label=good%20first%20issues&color=blue)](https://github.com/tarunjandra/agent-tools-mcp-hub/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
-[![All Contributors](https://img.shields.io/badge/all_contributors-29-orange.svg?style=flat-square)](#-contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-30-orange.svg?style=flat-square)](#-contributors)
 
 A curated, plug-and-play collection of **AI Agent Tools**, **Model Context Protocol (MCP)** servers, and integration connectors for modern AI agents (LangChain, CrewAI, AutoGen, OpenAI Swarm).
 
@@ -38,6 +38,7 @@ Building AI agents requires connecting them to real-world APIs, tools, and datab
 | [`crypto_price_tracker`](tools/crypto_price_tracker/) | Finance | Python | ✅ | A tool to fetch the current price of cryptocurrencies using the CoinGecko API. |
 | [`telegram_notifier`](tools/telegram_notifier/) | Communication | Python | ✅ | Sends text messages, alerts, and Markdown/HTML notifications to Telegram chats or channels via Telegram Bot API. |
 | [`yahoo_finance`](tools/yahoo_finance/) | Finance | Python | ✅ | A tool to fetch current stock quotes and basic company info using Yahoo Finance. |
+| [`defillama_tvl_ts`](tools/defillama_tvl_ts/) | Finance | TypeScript | ✅ | Fetches total value locked, 24-hour change, chain distribution, and yield pools for DeFi protocols via DefiLlama. |
 | [`qr_code_generator`](tools/qr_code_generator/) | Utilities | Python | ✅ | Generates QR code images from URLs or text strings and returns them as base64-encoded PNG data. |
 | [`hackernews_profile_ts`](tools/hackernews_profile_ts/) | Search & Web | TypeScript | ✅ | Fetches HackerNews user profiles with karma, creation date, and submission count. |
 | [`github_repo_info`](tools/github_repo_info/) | Developer Tools | Python | ✅ | Fetches public metadata for any GitHub repository — stars, forks, primary language, open issues, license, topics and description. |
@@ -155,6 +156,7 @@ Thanks to these wonderful people for contributing to the Agent Tools Hub!
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ashmeet07"><img src="https://avatars.githubusercontent.com/ashmeet07" width="80px;" alt="Ashmeet"/><br /><sub><b>Ashmeet</b></sub></a><br />💻 🎨</td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/mikemikimike"><img src="https://avatars.githubusercontent.com/mikemikimike" width="80px;" alt="Mike"/><br /><sub><b>Mike</b></sub></a><br />💻 📈</td>
     </tr>
   </tbody>
 </table>

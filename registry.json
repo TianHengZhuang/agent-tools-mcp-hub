@@ -1,5 +1,5 @@
 {
-  "total_tools": 44,
+  "total_tools": 45,
   "tools": [
     {
       "name": "arxiv_search",
@@ -267,6 +267,31 @@
         "required": [
           "from_currency",
           "to_currency"
+        ]
+      },
+      "env_vars": []
+    },
+    {
+      "name": "defillama_tvl_ts",
+      "display_name": "DefiLlama TVL & Yields Explorer (TypeScript)",
+      "description": "Fetches current total value locked, 24-hour change, chain distribution, and top yield pools for a DeFi protocol or chain using the free DefiLlama API.",
+      "category": "Finance",
+      "language": "typescript",
+      "mcp_compatible": true,
+      "author": {
+        "name": "Mike",
+        "github": "mikemikimike"
+      },
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Protocol slug or chain name, such as 'aave' or 'Ethereum'."
+          }
+        },
+        "required": [
+          "query"
         ]
       },
       "env_vars": []
