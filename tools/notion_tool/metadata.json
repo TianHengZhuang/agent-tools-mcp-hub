@@ -1,0 +1,53 @@
+{
+  "name": "notion_tool",
+  "display_name": "Notion Tool",
+  "description": "A tool for interacting with Notion API.",
+  "category": "Utilities",
+  "language": "python",
+  "mcp_compatible": true,
+    "author": {
+      "name": "Shlok Bajpai",
+      "github": "Shlok Bajpai"
+    },
+  "parameters": {
+    "type": "object",
+    "properties": {
+        "action": {
+          "type": "string",
+          "enum": ["create_page", "append_blocks"],
+          "description": "The Notion operation to perform"
+        },
+        "database_id": {
+          "type": "string",
+          "description": "Database ID for create_page"
+        },
+        "title": {
+          "type": "string",
+          "description": "New page title for create_page"
+        },
+        "page_id": {
+          "type": "string",
+          "description": "Existing page ID for append_blocks"
+        },
+        "texts": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Text items to append"
+        },
+        "bullets": {
+          "type": "boolean",
+          "description": "Append text as bulleted list items"
+        },
+        "properties": {
+          "type": "object",
+          "description": "Optional Notion page properties"
+        },
+        "blocks": {
+          "type": "array",
+          "description": "Optional pre-built Notion blocks for a new page"
+      }
+    },
+      "required": ["action"]
+  },
+    "env_vars": ["NOTION_TOKEN"]
+}
