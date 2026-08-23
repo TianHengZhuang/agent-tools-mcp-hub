@@ -135,6 +135,6 @@ export async function runTool(query: string): Promise<ExplorerResult> {
   }
 }
 
-if (require.main === module) {
+if (typeof require !== "undefined" && typeof module !== "undefined" && require.main === module) {
   runTool(process.argv[2] ?? "Ethereum").then((result) => console.log(JSON.stringify(result, null, 2)));
 }
