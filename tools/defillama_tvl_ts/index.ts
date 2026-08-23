@@ -59,17 +59,21 @@ async function request<T>(path: string, base = API): Promise<T> {
   return (await response.json()) as T;
 }
 
-function change24h(history: Array<{ date: number; totalLiquidityUSD: number }>): number | null {
+export function change24h(history: Array<{ date: number; totalLiquidityUSD: number }>): number | null {
   if (history.length < 2) return null;
-  const current = history[history.length - 1].totalLiquidityUSD;
-  const previous = history[history.length - 2].totalLiquidityUSD;
+  const ordered = [...history].sort((a, b) => a.date - b.date);
+  const currentPoint = ordered[ordered.length - 1];
+  const previousPoint = [...ordered].reverse().find((point) => currentPoint.date - point.date >= 23 * 60 * 60);
+  if (!previousPoint) return null;
+  const current = currentPoint.totalLiquidityUSD;
+  const previous = previousPoint.totalLiquidityUSD;
   return previous === 0 ? null : Number((((current - previous) / previous) * 100).toFixed(2));
 }
 
-function topPools(pools: Pool[]): Array<Record<string, string | number | null>> {
+export function topPools(pools: Pool[]): Array<Record<string, string | number | null>> {
   return pools
     .filter((pool) => typeof pool.tvlUsd === "number" && typeof pool.apy === "number")
-    .sort((a, b) => (b.tvlUsd ?? 0) - (a.tvlUsd ?? 0))
+    .sort((a, b) => (b.apy ?? 0) - (a.apy ?? 0))
     .slice(0, 10)
     .map((pool) => ({
       project: pool.project ?? "",
@@ -103,6 +107,7 @@ export async function runTool(query: string): Promise<ExplorerResult> {
         distribution[chain] = chainData.tvl?.at(-1)?.totalLiquidityUSD ?? 0;
       }
     } catch (protocolError) {
+      if (!(protocolError instanceof Error) || !protocolError.message.includes("HTTP 404")) throw protocolError;
       const chains = await request<ChainResponse[]>("/v2/chains");
       const chain = chains.find((item) => item.name.toLowerCase() === value.toLowerCase());
       if (!chain) throw protocolError;
