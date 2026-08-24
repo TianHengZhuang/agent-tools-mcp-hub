@@ -1,0 +1,36 @@
+{
+  "name": "world_bank_indicators",
+  "display_name": "World Bank Global Economic Indicators",
+  "description": "Queries the World Bank Open Data API to fetch macroeconomic indicators such as GDP growth, inflation, and population for any country.",
+  "category": "Finance & Economics",
+  "language": "python",
+  "mcp_compatible": true,
+  "author": {
+    "name": "HackerTrinity",
+    "github": "HackerTrinity"
+  },
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "country": {
+        "type": "string",
+        "description": "ISO2 or ISO3 country code (e.g., US, IN, GB, DE)",
+        "default": "US"
+      },
+      "indicator": {
+        "type": "string",
+        "description": "World Bank indicator code or alias (e.g., NY.GDP.MKTP.KD.ZG for GDP growth, FP.CPI.TOTL.ZG for inflation, SP.POP.TOTL for population)",
+        "default": "NY.GDP.MKTP.KD.ZG"
+      },
+      "years": {
+        "type": "integer",
+        "description": "Number of recent annual observations to return (default 5)",
+        "default": 5
+      }
+    },
+    "required": [
+      "country"
+    ]
+  },
+  "env_vars": []
+}
