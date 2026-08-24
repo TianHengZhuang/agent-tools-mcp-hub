@@ -1,5 +1,5 @@
 {
-  "total_tools": 45,
+  "total_tools": 47,
   "tools": [
     {
       "name": "arxiv_search",
@@ -1173,6 +1173,68 @@
       ]
     },
     {
+      "name": "notion_tool",
+      "display_name": "Notion Tool",
+      "description": "A tool for interacting with Notion API.",
+      "category": "Utilities",
+      "language": "python",
+      "mcp_compatible": true,
+      "author": {
+        "name": "Shlok Bajpai",
+        "github": "shlokbajpai"
+      },
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "create_page",
+              "append_blocks"
+            ],
+            "description": "The Notion operation to perform"
+          },
+          "database_id": {
+            "type": "string",
+            "description": "Database ID for create_page"
+          },
+          "title": {
+            "type": "string",
+            "description": "New page title for create_page"
+          },
+          "page_id": {
+            "type": "string",
+            "description": "Existing page ID for append_blocks"
+          },
+          "texts": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Text items to append"
+          },
+          "bullets": {
+            "type": "boolean",
+            "description": "Append text as bulleted list items"
+          },
+          "properties": {
+            "type": "object",
+            "description": "Optional Notion page properties"
+          },
+          "blocks": {
+            "type": "array",
+            "description": "Optional pre-built Notion blocks for a new page"
+          }
+        },
+        "required": [
+          "action"
+        ]
+      },
+      "env_vars": [
+        "NOTION_TOKEN"
+      ]
+    },
+    {
       "name": "open_meteo_weather",
       "display_name": "Open-Meteo Weather",
       "description": "Fetches current weather and a 7-day forecast for any city using the free, zero-auth Open-Meteo API.",
@@ -1891,6 +1953,42 @@
         },
         "required": [
           "query"
+        ]
+      },
+      "env_vars": []
+    },
+    {
+      "name": "world_bank_indicators",
+      "display_name": "World Bank Global Economic Indicators",
+      "description": "Queries the World Bank Open Data API to fetch macroeconomic indicators such as GDP growth, inflation, and population for any country.",
+      "category": "Finance & Economics",
+      "language": "python",
+      "mcp_compatible": true,
+      "author": {
+        "name": "HackerTrinity",
+        "github": "HackerTrinity"
+      },
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "country": {
+            "type": "string",
+            "description": "ISO2 or ISO3 country code (e.g., US, IN, GB, DE)",
+            "default": "US"
+          },
+          "indicator": {
+            "type": "string",
+            "description": "World Bank indicator code or alias (e.g., NY.GDP.MKTP.KD.ZG for GDP growth, FP.CPI.TOTL.ZG for inflation, SP.POP.TOTL for population)",
+            "default": "NY.GDP.MKTP.KD.ZG"
+          },
+          "years": {
+            "type": "integer",
+            "description": "Number of recent annual observations to return (default 5)",
+            "default": 5
+          }
+        },
+        "required": [
+          "country"
         ]
       },
       "env_vars": []

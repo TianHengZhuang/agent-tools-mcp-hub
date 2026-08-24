@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Good First Issues](https://img.shields.io/github/issues/community/good-first-issue?label=good%20first%20issues&color=blue)](https://github.com/tarunjandra/agent-tools-mcp-hub/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
-[![All Contributors](https://img.shields.io/badge/all_contributors-30-orange.svg?style=flat-square)](#-contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-32-orange.svg?style=flat-square)](#-contributors)
 
 A curated, plug-and-play collection of **AI Agent Tools**, **Model Context Protocol (MCP)** servers, and integration connectors for modern AI agents (LangChain, CrewAI, AutoGen, OpenAI Swarm).
 
@@ -39,6 +39,7 @@ Building AI agents requires connecting them to real-world APIs, tools, and datab
 | [`telegram_notifier`](tools/telegram_notifier/) | Communication | Python | ✅ | Sends text messages, alerts, and Markdown/HTML notifications to Telegram chats or channels via Telegram Bot API. |
 | [`yahoo_finance`](tools/yahoo_finance/) | Finance | Python | ✅ | A tool to fetch current stock quotes and basic company info using Yahoo Finance. |
 | [`defillama_tvl_ts`](tools/defillama_tvl_ts/) | Finance | TypeScript | ✅ | Fetches total value locked, 24-hour change, chain distribution, and yield pools for DeFi protocols via DefiLlama. |
+| [`world_bank_indicators`](tools/world_bank_indicators/) | Finance | Python | ✅ | Queries World Bank Open Data API to fetch macroeconomic indicators (GDP growth, inflation, population). |
 | [`qr_code_generator`](tools/qr_code_generator/) | Utilities | Python | ✅ | Generates QR code images from URLs or text strings and returns them as base64-encoded PNG data. |
 | [`hackernews_profile_ts`](tools/hackernews_profile_ts/) | Search & Web | TypeScript | ✅ | Fetches HackerNews user profiles with karma, creation date, and submission count. |
 | [`github_repo_info`](tools/github_repo_info/) | Developer Tools | Python | ✅ | Fetches public metadata for any GitHub repository — stars, forks, primary language, open issues, license, topics and description. |
@@ -68,6 +69,7 @@ Building AI agents requires connecting them to real-world APIs, tools, and datab
 | [`sendgrid_email_dispatcher`](tools/sendgrid_email_dispatcher/) | Communication | Python | ✅ | Send plain-text or HTML emails to recipients using the SendGrid API. |
 | [`crewai_wrapper_demo`](tools/crewai_wrapper_demo/) | Frameworks | Python | ✅ | Adapts any tool in this hub into a CrewAI tool automatically with dynamic Pydantic schemas. |
 | [`notion_block_appender`](tools/notion_block_appender/) | Productivity | Python | ✅ | Append structured content blocks (headings, lists, code, todo) to a Notion page or block. |
+| [`notion_tool`](tools/notion_tool/) | Productivity | Python | ✅ | Interact with Notion API to create pages, databases, and append structured content blocks. |
 | *[Add your tool here!](CONTRIBUTING.md)* | *Any* | *Any* | *Any* | *Submit a pull request in 15 minutes!* |
 
 ---
@@ -157,6 +159,8 @@ Thanks to these wonderful people for contributing to the Agent Tools Hub!
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ashmeet07"><img src="https://avatars.githubusercontent.com/ashmeet07" width="80px;" alt="Ashmeet"/><br /><sub><b>Ashmeet</b></sub></a><br />💻 🎨</td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/mikemikimike"><img src="https://avatars.githubusercontent.com/mikemikimike" width="80px;" alt="Mike"/><br /><sub><b>Mike</b></sub></a><br />💻 📈</td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/shlokbajpai"><img src="https://avatars.githubusercontent.com/shlokbajpai" width="80px;" alt="Shlok Bajpai"/><br /><sub><b>Shlok Bajpai</b></sub></a><br />💻 📝</td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/HackerTrinity"><img src="https://avatars.githubusercontent.com/HackerTrinity" width="80px;" alt="HackerTrinity"/><br /><sub><b>HackerTrinity</b></sub></a><br />💻 🌐</td>
     </tr>
   </tbody>
 </table>
