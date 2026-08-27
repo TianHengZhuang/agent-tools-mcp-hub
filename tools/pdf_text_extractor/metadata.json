@@ -3,12 +3,8 @@
   "display_name": "PDF Text Extractor",
   "description": "Extract plain text from local PDF files using pypdf.",
   "category": "Utilities",
-  "language": "python",
+  "language": "Python",
   "mcp_compatible": true,
-  "author": {
-    "name": "Ayesha Maqsood",
-    "github": "ayesha8087"
-  },
   "parameters": {
     "type": "object",
     "properties": {
@@ -18,6 +14,5 @@
       }
     },
     "required": ["file_path"]
-  },
-  "env_vars": []
+  }
 }
